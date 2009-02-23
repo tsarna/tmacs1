@@ -73,6 +73,7 @@ char *buf;
 int eolchar;
 
 {
+    
 	return(nextarg(prompt, buf, nbuf, eolchar));
 }
 
@@ -112,9 +113,6 @@ int c;
 int (*getname())()
 
 {
-#if	ST520 & LATTICE
-#define register
-#endif
 	register int cpos;	/* current column on screen output */
 	register int c;
 	register char *sp;	/* pointer to string for output */
@@ -305,7 +303,7 @@ get1key()
 	/* get a keystroke */
         c = tgetc();
 
-#if	MSDOS | ST520
+#if	MSDOS
 	if (c == 0) {				/* Apply SPEC prefix	*/
 	        c = tgetc();
 	        if (c>=0x00 && c<=0x1F)		/* control key? */

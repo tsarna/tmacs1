@@ -36,12 +36,11 @@
 */
 
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0.6"
+#define	VERSION		"1.0.7"
 
 /*	Machine/OS definitions			*/
 
 #define AMIGA   0                       /* AmigaDOS			*/
-#define ST520   0                       /* ST520, TOS                   */
 #define MSDOS   0                       /* MS-DOS                       */
 #define V7      0                       /* V7 UNIX or Coherent or BSD4.2*/
 #define	BSD 	1			/* UNIX BSD 4.2	and ULTRIX	*/
@@ -71,7 +70,6 @@
 #define RAINBOW 0                       /* Use Rainbow fast video.      */
 #define TERMCAP 1                       /* Use TERMCAP                  */
 #define	IBMPC	0			/* IBM-PC CGA/MONO/EGA driver	*/
-#define	ATARI	0			/* Atari 520/1040ST screen	*/
 
 /*	Configuration options	*/
 
@@ -586,10 +584,7 @@ typedef struct WHBLOCK {
 #define	IS_FORWARD	0x13	/* Search forward */
 #define	IS_VMSQUOTE	0x16	/* VMS quote character */
 #define	IS_VMSFORW	0x18	/* Search forward for VMS */
-#define	IS_QUIT		0x1B	/* Exit the search */
 #define	IS_RUBOUT	0x7F	/* Delete previous character */
-
-/* IS_QUIT is no longer used, the variable metac is used instead */
 
 #endif
 

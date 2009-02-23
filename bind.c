@@ -10,7 +10,7 @@
 #include	"edef.h"
 #include	"epath.h"
 
-extern int metakey(), cex(), unarg(), ctrlg(); /* dummy prefix binding functions */
+extern int metakey(), searchterm(), cex(), unarg(), ctrlg(); /* dummy prefix binding functions */
 
 help(f, n)	/* give me some help!!!!
 		   bring up a fake buffer and read the help file
@@ -111,7 +111,8 @@ int f, n;	/* command arguments [IGNORED] */
 
 	/* get the command sequence to bind */
 	c = getckey((kfunc == metakey) || (kfunc == cex) ||
-	            (kfunc == unarg) || (kfunc == ctrlg));
+	            (kfunc == searchterm) || (kfunc == unarg) ||
+	            (kfunc == ctrlg));
 
 	/* change it to something we can print as well */
 	cmdstr(c, &outseq[0]);
@@ -121,7 +122,7 @@ int f, n;	/* command arguments [IGNORED] */
 
 	/* if the function is a prefix key */
 	if (kfunc == metakey || kfunc == cex ||
-	    kfunc == unarg || kfunc == ctrlg) {
+	    kfunc == unarg || kfunc == ctrlg || kfunc == searchterm) {
 
 		/* search for an existing binding for the prefix key */
 		ktp = &keytab[0];
@@ -134,6 +135,8 @@ int f, n;	/* command arguments [IGNORED] */
 		/* reset the appropriate global prefix variable */
 		if (kfunc == metakey)
 			metac = c;
+		if (kfunc == searchterm)
+			sterm = c;
 		if (kfunc == cex)
 			ctlxc = c;
 		if (kfunc == unarg)
@@ -270,9 +273,6 @@ char *mstring;	/* match string if a partial list */
 
 #endif
 {
-#if	ST520 & LATTICE
-#define	register
-#endif
 	register WINDOW *wp;	/* scanning pointer to windows */
 	register KEYTAB *ktp;	/* pointer into the command table */
 	register NBIND *nptr;	/* pointer into the name binding table */

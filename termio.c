@@ -33,11 +33,6 @@ static char     scrn_tmp[AMG_MAXBUF+1];
 static long     scrn_tmp_p = 0;
 #endif
 
-#if ST520 & MEGAMAX
-#include <osbind.h>
-	int STscancode = 0;	
-#endif
-
 #if     VMS
 #include        <stsdef.h>
 #include        <ssdef.h>
@@ -326,7 +321,7 @@ ttclose()
  * MS-DOS (use the very very raw console output routine).
  */
 ttputc(c)
-#if     AMIGA | (ST520 & MEGAMAX)
+#if     AMIGA
         char c;
 #endif
 {
@@ -334,9 +329,6 @@ ttputc(c)
         scrn_tmp[scrn_tmp_p++] = c;
         if(scrn_tmp_p>=AMG_MAXBUF)
                 amg_flush();
-#endif
-#if	ST520 & MEGAMAX
-	Bconout(2,c);
 #endif
 #if     VMS
         if (nobuf >= NOBUF)
@@ -423,18 +415,6 @@ ttgetc()
         Read(terminal, &ch, 1L);
         return(255 & (int)ch);
 #endif
-#if	ST520 & MEGAMAX
-	long ch;
-/*
- * blink the cursor only if nothing is happening, this keeps the
- * cursor on steadily during movement making it easier to track
- */
-	STcurblink(TRUE);  /* the cursor blinks while we wait */
-	ch = Bconin(2);
-	STcurblink(FALSE); /* the cursor is steady while we work */
-	STscancode = (ch >> 16) & 0xff;
-       	return(255 & (int)ch);
-#endif
 #if     VMS
         int     status;
         int     iosb[2];
@@ -520,7 +500,7 @@ ttgetc()
 #endif
 }
 
-#if	TYPEAH & (~ST520 | ~LATTICE)
+#if	TYPEAH & ~LATTICE
 /* typahead:	Check to see if any characters are already in the
 		keyboard buffer
 */

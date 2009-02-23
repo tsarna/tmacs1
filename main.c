@@ -545,8 +545,6 @@
  *	2-feb-87
  *	- added ATARI 1040 support...runs in all three modes right now
  *	- added $palette var with palette value in it
- *	- undefined "register" in BIND.C and INPUT.C for ST520 & LATTICE
- *	  to get around a nasty Lattice bug
  *	4-feb-87
  *	- added, debugged code for switching all 1040ST color modes, added
  *	  code for HIGH monochrome mode as well, DENSE still pending
@@ -758,8 +756,6 @@
  *	- made out of memory conditions safer.. especial on file reads
  *	- fixed a bug in bind having to do with uppercasing function
  *	  key names (submitted by Jari Salminen)
- *	- made ST520 exit in the same resolution that EMACS was started in
- *	  (for the 1040ST)
  *	[FROZE development and released version 3.9 to USENET]
  */
 
@@ -770,10 +766,6 @@
 
 #if	MSDOS & LATTICE
 unsigned _stack = 32767;
-#endif
-
-#if	ATARI & LATTICE & 0
-int _mneed = 256000;		/* reset memory pool size */
 #endif
 
 #if	MSDOS & AZTEC
@@ -1341,9 +1333,14 @@ resterr()
 nullproc()	/* user function that does NOTHING */
 
 {
+    return FALSE;
 }
 
 metakey()	/* dummy function for binding to meta prefix */
+{
+}
+
+searchterm()	/* dummy function for binding to search terminator */
 {
 }
 

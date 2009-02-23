@@ -92,6 +92,7 @@ extern	int	fillpara();		/* fill current paragraph	*/
 extern	int	help();			/* get the help file here	*/
 extern	int	deskey();		/* describe a key's binding	*/
 extern	int	viewfile();		/* find a file in view mode	*/
+extern	int	viewmode();		/* set view mode		*/
 extern	int	insfile();		/* insert a file		*/
 extern	int	scrnextup();		/* scroll next window back	*/
 extern	int	scrnextdw();		/* scroll next window down	*/
@@ -158,6 +159,7 @@ extern	int	storemac();		/* store text for macro		*/
 extern	int	resize();		/* resize current window	*/
 extern	int	clrmes();		/* clear the message line	*/
 extern	int	metakey();		/* meta prefix dummy function	*/
+extern	int	searchterm();		/* search terminator dummy function */
 extern	int	cex();			/* ^X prefix dummy function	*/
 extern	int	unarg();		/* ^U repeat arg dummy function	*/
 extern	int	istring();		/* insert string in text	*/
@@ -356,6 +358,7 @@ NBIND	names[] = {
 #endif
 	{"list-buffers",		listbuffers},
 	{"meta-prefix",			metakey},
+	{"terminate-search",		searchterm},
 	{"move-window-down",		mvdnwind},
 	{"move-window-up",		mvupwind},
 	{"name-buffer",			namebuffer},
@@ -431,6 +434,7 @@ NBIND	names[] = {
 	{"unmark-buffer",		unmark},
 	{"update-screen",		upscreen},
 	{"view-file",			viewfile},
+	{"view-mode",			viewmode},
 	{"wrap-word",			wrapword},
 	{"write-file",			filewrite},
 	{"write-message",		writemsg},

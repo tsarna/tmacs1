@@ -11,16 +11,6 @@
 #define  NEW   1006L
 #endif
 
-#if		ST520 & MEGAMAX
-#include <osbind.h>
-#include <string.h>
-#define LOAD_EXEC 0 	/* load and execute the program */
-char	*STcmd,		/* the command filename & path  */
-	*STargs,	/* command args (if any)        */
-	*STenv,		/* environment                  */
-	*STwork;	/* work area			*/
-#endif
-
 #if     VMS
 #define EFN     0                               /* Event flag.          */
 
@@ -81,9 +71,6 @@ spawncli(f, n)
 #endif
 #if     CPM
         mlwrite("Not in CP/M-86");
-#endif
-#if	ST520
-	mlwrite("Not in TOS");
 #endif
 #if     MSDOS & (AZTEC | MSC | TURBO)
         movecursor(term.t_nrow, 0);             /* Seek to last line.   */
@@ -151,11 +138,6 @@ spawn(f, n)
         register int    s;
         char            line[NLINE];
 
-#if	ST520 & MEGAMAX
-	int i,j,k;
-	char *sptr,*tptr;
-#endif
-
 #if     AMIGA
         long newcli;
 #endif
@@ -174,70 +156,6 @@ spawn(f, n)
         sgarbf = TRUE;
         return(TRUE);
 #endif
-#if     ST520 & MEGAMAX
-        if ((s=mlreply("!", line, NLINE)) != TRUE)
-                return(s);
-	movecursor(term.t_nrow - 1, 0);
-	TTclose();
-/*
- * break the line into the command and its args
- * be cute about it, if there is no '.' in the filename, try
- * to find .prg, .tos or .ttp in that order
- * in any case check to see that the file exists before we run 
- * amok
- */
-	STenv = NULL;
-	if((tptr = index(&line[0],' ')) == NULL) { /* no args */
-		STcmd = (char *)malloc(strlen(line) + 1);
-		strcpy(STcmd,line);
-		STargs = NULL;
-	}
-	else {  /* seperate out the args from the command */
-		/* resist the temptation to do ptr arithmetic */
-		STcmd = (char *)malloc(strlen(line) + 1);
-		for(i = 0,sptr = &line[0]; sptr != tptr; sptr++,i++)
-			STcmd[i] = *sptr;
-		STcmd[i] = '\0';
-		for(; *tptr == ' ' || *tptr == '\t'; tptr++);
-		if(*tptr == '\0')
-			STargs = NULL;
-		else {
-			STargs = (char *)malloc(strlen(tptr) + 2);
-/* first byte of STargs is the length of the string */
-			STargs[0] = strlen(tptr);
-			STargs[1] = NULL; /* fake it for strcat */
-			strcat(STargs,tptr);
-		}
-	}
-/*
- * before we issue the command look for the '.', if it's not there
- * try adding .prg, .tos and .ttp to see if they exist, if not
- * issue the command as is
- */
-	if((tptr = index(STcmd,'.')) == NULL) {
- 		STwork = (char *)malloc(strlen(STcmd) + 4);
- 		strcpy(STwork,STcmd);
- 		strcat(STwork,".prg");
- 		tptr = index(STwork,'.');
- 		if(Fsfirst(1,STwork) != 0) { /* try .tos */
- 			strcpy(tptr,".tos");
- 			if(Fsfirst(1,STwork) != 0) { /* try .ttp */
- 				strcpy(tptr,".ttp");
- 				if(Fsfirst(1,STwork) != 0) /* never mind */
- 					*STwork = NULL;
- 				}
- 			}
- 	}
- 	if(*STwork != NULL)
-	        Pexec(LOAD_EXEC,STwork,STargs,STenv); 		
-	else
-	        Pexec(LOAD_EXEC,STcmd,STargs,STenv);
-	TTopen();
-        mlputs("\r\n\n[End]");                  /* Pause.               */
-        TTgetc();			     /* Pause.               */
-        sgarbf = TRUE;
-        return (TRUE);
-#endif
 #if     VMS
         if ((s=mlreply("!", line, NLINE)) != TRUE)
                 return (s);
@@ -254,7 +172,7 @@ spawn(f, n)
         mlwrite("Not in CP/M-86");
         return (FALSE);
 #endif
-#if     MSDOS | (ST520 & LATTICE)
+#if     MSDOS
         if ((s=mlreply("!", line, NLINE)) != TRUE)
                 return(s);
 	movecursor(term.t_nrow - 1, 0);

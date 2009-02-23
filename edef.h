@@ -67,6 +67,7 @@ int	lbound	= 0;			/* leftmost column of current line
 					   being displayed */
 int	taboff	= 0;			/* tab offset for display	*/
 int	metac = CTRL | '[';		/* current meta character */
+int	sterm = CTRL | '[';		/* current search terminator    */
 int	ctlxc = CTRL | 'X';		/* current control X prefix char */
 int	reptc = CTRL | 'U';		/* current universal repeat char */
 int	abortc = CTRL | 'G';		/* current abort command char	*/
@@ -201,6 +202,7 @@ extern	int	lbound;			/* leftmost column of current line
 					   being displayed */
 extern	int	taboff;			/* tab offset for display	*/
 extern	int	metac;			/* current meta character */
+extern	int	sterm;			/* current search terminator */
 extern	int	ctlxc;			/* current control X prefix char */
 extern	int	reptc;			/* current universal repeat char */
 extern	int	abortc;			/* current abort command char	*/

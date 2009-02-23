@@ -10,6 +10,7 @@
 FILE	*ffp;		/* File pointer, all functions. */
 int eofflag;		/* end-of-file flag */
 
+
 /*
  * Open a file for reading.
  */
@@ -96,9 +97,6 @@ char    buf[];
                 fputc(buf[i]&0xFF, ffp);
 #endif
 
-#if	ST520
-        fputc('\r', ffp);
-#endif        
         fputc('\n', ffp);
 
         if (ferror(ffp)) {
@@ -151,11 +149,6 @@ ffgetline()
                 	fline = tmpline;
                 }
         }
-
-#if	ST520
-	if(fline[i-1] == '\r')
-		i--;
-#endif
 
 	/* test for any errors that may have occured */
         if (c == EOF) {

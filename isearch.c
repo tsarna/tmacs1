@@ -180,7 +180,7 @@ start_over:
 	/* Check for special characters first: */
 	/* Most cases here change the search */
 
-	if (expc == metac)			/* Want to quit searching?    */
+	if (expc == sterm)			/* Want to quit searching?    */
 	    return (TRUE);			/* Quit searching now	      */
 
 	switch (c)				/* dispatch on the input char */
@@ -466,7 +466,7 @@ int get_char ()
     if (cmd_offset >= CMDBUFLEN-1)	/* If we're getting too big ...	      */
     {
 	mlwrite ("? command too long");	/* Complain loudly and bitterly	      */
-	return (metac);			/* And force a quit		      */
+	return (sterm);			/* And force a quit		      */
     }
     c = get1key();		/* Get the next character	      */
     cmd_buff[cmd_offset++] = c; /* Save the char for next time        */

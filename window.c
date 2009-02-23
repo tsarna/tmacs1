@@ -7,10 +7,6 @@
 #include        "estruct.h"
 #include	"edef.h"
 
-#if	MEGAMAX & ST520
-overlay	"window"
-#endif
-
 /*
  * Reposition dot in the current window to line "n". If the argument is
  * positive, it is that line. If it is negative it is that line from the

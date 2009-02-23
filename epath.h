@@ -21,17 +21,6 @@ char *pathname[] =
 };
 #endif
 
-#if	ST520
-{
-	"emacs.rc",
-	"emacs.hlp",
-	"\\",
-	"\\bin\\",
-	"\\util\\",
-	""
-};
-#endif
-
 #if	MSDOS
 {
 	"emacs.rc",

@@ -755,6 +755,13 @@ int f, n;	/* default and argument */
 	adjustmode(FALSE, TRUE);
 }
 
+viewmode(f, n)  /* turn on view mode */
+int f, n;
+{
+	curbp->b_mode |= MDVIEW;
+	upmode();
+}
+
 adjustmode(kind, global)	/* change the editor mode status */
 
 int kind;	/* true = set,		false = delete */
@@ -1051,7 +1058,7 @@ int f, n;	/* ignored arguments */
 	char tstring[NPAT+1];	/* string to add */
 
 	/* ask for string to insert */
-	status = mlreplyt("String to insert<META>: ", tstring, NPAT, metac);
+	status = mlreplyt("String to insert: ", tstring, NPAT, sterm);
 	if (status != TRUE)
 		return(status);
 

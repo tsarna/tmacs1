@@ -36,6 +36,7 @@ KEYTAB  keytab[NBINDS] = {
 	{CTRL|'Y',		yank},
 	{CTRL|'Z',		backpage},
 	{CTRL|']',		metakey},
+	{CTRL|']',		searchterm},
 	{CTLX|CTRL|'B',		listbuffers},
 	{CTLX|CTRL|'C',		quit},          /* Hard quit.           */
 #if	AEDIT
@@ -212,35 +213,13 @@ KEYTAB  keytab[NBINDS] = {
 	{127,			forwdel},
 #endif
 
-#if	ST520
-	{SPEC|'b',		help},
-	{SPEC|'H',		backline},
-	{SPEC|'P',		forwline},
-	{SPEC|'M',		forwchar},
-	{SPEC|'K',		backchar},
-	{SPEC|'t',		setmark},
-	{SPEC|'a',		yank},
-	{SPEC|'R',		insspace},
-	{SPEC|'G',		gotobob},
-	{127,			forwdel},
-	{SPEC|84,		cbuf1},
-	{SPEC|85,		cbuf2},
-	{SPEC|86,		cbuf3},
-	{SPEC|87,		cbuf4},
-	{SPEC|88,		cbuf5},
-	{SPEC|89,		cbuf6},
-	{SPEC|90,		cbuf7},
-	{SPEC|91,		cbuf8},
-	{SPEC|92,		cbuf9},
-	{SPEC|93,		cbuf10},
-#endif
-
 	{0x7F,			backdel},
 
 	/* special internal bindings */
 	SPEC|META|'W',		wrapword,	/* called on word wrap */
 	SPEC|META|'C',		nullproc,	/*  every command input */
 	SPEC|META|'R',		nullproc,	/*  on file read */
+	SPEC|META|'O',		viewmode,	/* open read-only file  */
 	{0,			NULL}
 };
 

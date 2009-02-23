@@ -9,10 +9,6 @@
 #include	"estruct.h"
 #include        "edef.h"
 
-#if	MEGAMAX & ST520
-overlay	"region"
-#endif
-
 /*
  * Kill the region. Ask "getregion"
  * to figure out the bounds of the region.

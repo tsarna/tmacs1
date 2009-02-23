@@ -626,14 +626,14 @@ int	srch;
 	strcpy(tpat, prompt);	/* copy prompt to output string */
 	strcat(tpat, " [");	/* build new prompt string */
 	expandp(&apat[0], &tpat[strlen(tpat)], NPAT/2);	/* add old pattern */
-	strcat(tpat, "]<META>: ");
+	strcat(tpat, "]: ");
 
 	/* Read a pattern.  Either we get one,
 	 * or we just get the META charater, and use the previous pattern.
 	 * Then, if it's the search string, make a reversed pattern.
 	 * *Then*, make the meta-pattern, if we are defined that way.
 	 */
-	if ((status = mlreplyt(tpat, tpat, NPAT, metac)) == TRUE)
+	if ((status = mlreplyt(tpat, tpat, NPAT, sterm)) == TRUE)
 	{
 		strcpy(apat, tpat);
 		if (srch)	/* If we are doing the search string.*/

@@ -7,6 +7,7 @@
 */
 
 #include        <stdio.h>
+#include        <unistd.h>
 #include        <string.h>
 #include	"estruct.h"
 #include        "edef.h"
@@ -232,6 +233,10 @@ int	lockfl;		/* check for file locks? */
 	/* let a user macro get hold of things...if he wants */
 	execute(META|SPEC|'R', FALSE, 1);
 
+        if (access(fname, W_OK)) {
+        	execute(META|SPEC|'O', FALSE, 1);
+        }
+        
 	/* turn off ALL keyboard translation in case we get a dos error */
 	TTkclose();
 
@@ -323,10 +328,6 @@ char    fname[];
 #endif
 #if     MSDOS
         while (cp1!=&fname[0] && cp1[-1]!=':' && cp1[-1]!='\\'&&cp1[-1]!='/')
-                --cp1;
-#endif
-#if     ST520
-        while (cp1!=&fname[0] && cp1[-1]!=':' && cp1[-1]!='\\')
                 --cp1;
 #endif
 #if     V7 | USG | BSD
@@ -451,7 +452,8 @@ char    *fn;
 
         if ((s=ffwopen(fn)) != FIOSUC) {        /* Open writes message. */
 		TTkopen();
-                return (FALSE);
+
+                return FALSE;
         }
 	mlwrite("[Writing...]");		/* tell us were writing */
         lp = lforw(curbp->b_linep);             /* First line.          */
