@@ -246,11 +246,7 @@ spal()	/* reset the pallette registers */
 
 ibmbeep()
 {
-#if	MWC86
-	putcnb(BEL);
-#else
 	bdos(6, BEL, 0);
-#endif
 }
 
 ibmopen()

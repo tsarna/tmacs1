@@ -1,0 +1,23 @@
+CC=c89
+CFLAGS=-O -D_INCLUDE_POSIX_SOURCE
+LIBS=-ltermcap # -lcompat
+
+SRCS=	fileio.c line.c spawn.c display.c window.c basic.c eval.c \
+	main.c word.c bind.c random.c buffer.c exec.c input.c region.c \
+	crypt.c file.c isearch.c search.c termio.c tags.c tcap.c
+OBJS=	fileio.o line.o spawn.o display.o window.o basic.o eval.o \
+	main.o word.o bind.o random.o buffer.o exec.o input.o region.o \
+	crypt.o file.o isearch.o search.o termio.o tags.o tcap.o
+
+tmacs : $(OBJS)
+	$(CC) -o tmacs $(OBJS) $(LIBS)
+
+tags: $(SRCS)
+	ctags -t $(SRCS)
+
+clean:
+	rm -f tmacs $(OBJS)
+
+install: tmacs
+	strip tmacs
+	cp tmacs /usr/local/bin

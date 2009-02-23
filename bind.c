@@ -582,7 +582,7 @@ char *seq;	/* destination string for sequence */
 	}
 
 	/* apply control sequence if needed */
-	if (c & CTRL) {
+	if (c & Ctrl) {
 		*ptr++ = '^';
 	}
 
@@ -685,11 +685,11 @@ char *keyname;		/* name of key to translate to Command key form */
 
 	/* a control char? */
 	if (*keyname == '^' && *(keyname+1) != 0) {
-		c |= CTRL;
+		c |= Ctrl;
 		++keyname;
 	}
 	if (*keyname < 32) {
-		c |= CTRL;
+		c |= Ctrl;
 		*keyname += 'A';
 	}
 

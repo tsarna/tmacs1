@@ -1,5 +1,4 @@
-CC=/scratch/tools.sgimips/bin/mipseb--netbsd-gcc
-#CC=cc
+CC=cc
 CFLAGS=-O2 
 LIBS=-ltermcap # -lcompat
 

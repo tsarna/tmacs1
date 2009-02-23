@@ -8,6 +8,8 @@
 
 /* some global fuction declarations */
 
+#include <string.h>
+
 char *flook();
 char *getctext();
 char *getfname();
@@ -20,9 +22,6 @@ char *ltos();
 void *malloc();
 char *mklower();
 char *mkupper();
-char *strcat();
-char *strcpy();
-char *strncpy();
 char *token();
 char *transbind();
 unsigned int getckey();
@@ -66,11 +65,11 @@ int     ttcol   = HUGE;                 /* Column location of HW cursor */
 int	lbound	= 0;			/* leftmost column of current line
 					   being displayed */
 int	taboff	= 0;			/* tab offset for display	*/
-int	metac = CTRL | '[';		/* current meta character */
-int	sterm = CTRL | '[';		/* current search terminator    */
-int	ctlxc = CTRL | 'X';		/* current control X prefix char */
-int	reptc = CTRL | 'U';		/* current universal repeat char */
-int	abortc = CTRL | 'G';		/* current abort command char	*/
+int	metac = Ctrl | '[';		/* current meta character */
+int	sterm = Ctrl | '[';		/* current search terminator    */
+int	ctlxc = Ctrl | 'X';		/* current control X prefix char */
+int	reptc = Ctrl | 'U';		/* current universal repeat char */
+int	abortc = Ctrl | 'G';		/* current abort command char	*/
 
 int	quotec = 0x11;			/* quote char during mlreply() */
 char	*cname[] = {			/* names of colors		*/

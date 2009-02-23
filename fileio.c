@@ -55,7 +55,7 @@ ffclose()
 		fline = NULL;
 	}
 
-#if	MSDOS & CTRLZ
+#if	MSDOS & CtrlZ
 	fputc(26, ffp);		/* add a ^Z at the end of the file */
 #endif
 	

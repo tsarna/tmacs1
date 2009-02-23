@@ -233,7 +233,7 @@ int	lockfl;		/* check for file locks? */
 	/* let a user macro get hold of things...if he wants */
 	execute(META|SPEC|'R', FALSE, 1);
 
-        if (access(fname, W_OK)) {
+        if (access(fname, W_OK) && !access(fname, F_OK)) {
         	execute(META|SPEC|'O', FALSE, 1);
         }
         

@@ -59,7 +59,7 @@ short   iochan;                  /* TTY I/O channel             */
 #include        <bdos.h>
 #endif
 
-#if     MSDOS & (LATTICE | MSC | TURBO | AZTEC | MWC86)
+#if     MSDOS & (LATTICE | MSC | TURBO | AZTEC)
 union REGS rg;		/* cpu register for use of DOS calls */
 int nxtchar = -1;	/* character held from type ahead    */
 #endif
@@ -81,7 +81,6 @@ struct	termio	ntermio;	/* charactoristics to use inside */
 #endif
 
 #if	TERMIOS			/* POSIX */
-#undef	CTRL
 #include	<signal.h>
 #include	<termios.h>
 struct	termios	otermios;	/* original terminal characteristics */
@@ -93,7 +92,6 @@ struct	termios	ntermios;	/* charactoristics to use inside */
 #endif
 
 #if (V7 | BSD) & !TERMIOS
-#undef	CTRL
 #include        <sgtty.h>        /* for stty/gtty functions */
 #include	<signal.h>
 struct  sgttyb  ostate;          /* saved tty state */
@@ -112,7 +110,12 @@ char tobuf[TBUFSIZ];		/* terminal output buffer */
 
 
 
-#if defined(__CYGWIN__)
+#if defined(__CYGWIN__) || defined(__sun) || defined(__hpux)
+
+#if !defined(IMAXBEL)
+#define IMAXBEL 0
+#endif
+
 void
 cfmakeraw(struct termios *t)
 {
@@ -228,6 +231,8 @@ ttopen()
 	tcgetattr(0, &otermios);	/* save old settings   */
 	ntermios = otermios;    	/* then take a copy... */
 	cfmakeraw(&ntermios);           /* ...and make it raw  */
+	ntermios.c_cc[VMIN] = 1;
+	ntermios.c_cc[VTIME] = 0;
 
 	/* and activate them */
 	tcsetattr(0, TCSASOFT|TCSAFLUSH, &ntermios);
@@ -245,7 +250,11 @@ ttopen()
 #if	BSD
 	/* provide a smaller terminal output buffer so that
 	   the type ahead detection works better (more often) */
+#if defined(__hpux)
+	setvbuf(stdout, &tobuf[0], _IOFBF, TBUFSIZ);
+#else
 	setbuffer(stdout, &tobuf[0], TBUFSIZ);
+#endif
 	signal(SIGTSTP,SIG_DFL);	/* set signals so that we can */
 	signal(SIGCONT,rtfrmshell);	/* suspend & restart emacs */
 #endif
@@ -338,10 +347,6 @@ ttputc(c)
 
 #if     CPM
         bios(BCONOUT, c, 0);
-#endif
-
-#if     MSDOS & MWC86
-        putcnb(c);
 #endif
 
 #if	MSDOS & (LATTICE | AZTEC) & ~IBMPC
@@ -460,10 +465,6 @@ ttgetc()
         return Ch;
 #endif
 
-#if     MSDOS & MWC86
-        return (getcnb());
-#endif
-
 #if	MSDOS & (LATTICE | MSC | TURBO | AZTEC)
 	int c;		/* character read */
 
@@ -515,7 +516,7 @@ typahead()
 		return(FALSE);
 #endif
 
-#if	MSDOS & (LATTICE | AZTEC | MWC86)
+#if	MSDOS & (LATTICE | AZTEC)
 	int c;		/* character read */
 	int flags;	/* cpu flags from dos call */
 

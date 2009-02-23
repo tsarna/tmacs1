@@ -6,9 +6,9 @@
 1.0.5	cygwin support, removed hp150 and wangpc
 1.0.6	last hanging indent fix fixed, fixed ^X= at end, removed mac&dg10
 1.0.7	Made search terminator character rebindable, removed ST520
+1.0.8	portability, CTRL->Ctrl, removed MWC86, Makefiles, no VIEW on new files
 
 next on hit list:
 
 CPM
-MWC
 VMS

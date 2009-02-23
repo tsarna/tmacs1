@@ -452,7 +452,7 @@
  *	  with no newline (it no longer throws the partial line out)
  *	- [as suggested by Dave Tweten] Made adding a ^Z to the end
  *	  of an output file under MSDOS configurable under the
- *	  CTRL-Z symbol in ESTRUCT.H
+ *	  Ctrl-Z symbol in ESTRUCT.H
  *	- [Dave Tweten] Spawn will look up the "TMP" environment variable
  *	  for use during various pipeing commands.
  *	- [Dave Tweten] changed pipe command under MSDOS to use '>>'
@@ -820,7 +820,6 @@ char *argv[];
 	int cryptflag;			/* encrypting on the way in? */
 	char ekey[NPAT];		/* startup encryption key */
 #endif
-	char *strncpy();
 	extern *pathname[];		/* startup file path/name array */
 
 	/* initialize the editor */
@@ -1353,21 +1352,6 @@ unarg()	/* dummy function for binding to universal-argument */
 }
 
 /*****		Compiler specific Library functions	****/
-
-#if	MWC86 & MSDOS
-movmem(source, dest, size)
-
-char *source;	/* mem location to move memory from */
-char *dest;	/* memory location to move text to */
-int size;	/* number of bytes to move */
-
-{
-	register int i;
-
-	for (i=0; i < size; i++)
-		*dest++ = *source++;
-}
-#endif
 
 #if	(AZTEC | MSC | TURBO | LATTICE) & MSDOS
 /*	strncpy:	copy a string...with length restrictions

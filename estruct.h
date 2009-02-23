@@ -1,6 +1,3 @@
-/* HP-uX 11.0, Solaris 8: USG=1 TERMIOS=0 BSD=0 */
-/* Linux: USG=0 TERMIOS=1 BSD=1 */
-
 /*	ESTRUCT:	Structure and preprocesser defined for
 			MicroEMACS 3.9
 
@@ -36,7 +33,7 @@
 */
 
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0.7"
+#define	VERSION		"1.0.8"
 
 /*	Machine/OS definitions			*/
 
@@ -51,7 +48,6 @@
 
 /*	Compiler definitions			*/
 #define	UNIX	1	/* a random UNIX compiler */
-#define MWC86   0	/* marc williams compiler */
 #define	LATTICE	0	/* Lattice 2.14 thruough 3.0 compilers */
 #define	AZTEC	0	/* Aztec C 3.20e */
 #define	MSC	0	/* MicroSoft C compile version 3 & 4 */
@@ -80,7 +76,7 @@
 #define	TYPEAH	1	/* type ahead causes update to be skipped	*/
 #define DEBUGM	0	/* $debug triggers macro debugging		*/
 #define	VISMAC	0	/* update display during keyboard macros	*/
-#define	CTRLZ	0	/* add a ^Z at end of files under MSDOS only	*/
+#define	CtrlZ	0	/* add a ^Z at end of files under MSDOS only	*/
 
 #define	REVSTA	1	/* Status line appears in reverse video		*/
 #define	COLOR	0	/* color commands and windows			*/
@@ -152,26 +148,6 @@ union REGS {
 };
 #endif
 
-#if	MSDOS & MWC86
-#include	<dos.h>
-#define	int86(a, b, c)	intcall(b, c, a)
-#define	inp	in
-
-struct XREG {
-	int ax,bx,cx,dx,si,di,ds,es,flags;
-};
-
-struct HREG {
-	char al,ah,bl,bh,cl,ch,dl,dh;
-	int ds,es,flags;
-};
-
-union REGS {
-	struct XREG x;
-	struct HREG h;
-};
-#endif
-
 #if	MSDOS & MSC
 #include	<dos.h>
 #include	<memory.h>
@@ -221,7 +197,7 @@ union REGS {
 #define	NBLOCK	16			/* line block chunk size	*/
 #define	NVSIZE	10			/* max #chars in a var name	*/
 
-#define CTRL    0x0100                  /* Control flag, or'ed in       */
+#define Ctrl    0x0100                  /* Control flag, or'ed in       */
 #define META    0x0200                  /* Meta flag, or'ed in          */
 #define CTLX    0x0400                  /* ^X flag, or'ed in            */
 #define	SPEC	0x0800			/* special key (function keys)	*/

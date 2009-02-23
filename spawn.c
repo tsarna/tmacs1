@@ -490,16 +490,6 @@ sys(cmd, tail)
 char    *cmd;
 char    *tail;
 {
-#if MWC86
-        register unsigned n;
-        extern   char     *__end;
-
-        n = __end + 15;
-        n >>= 4;
-        n = ((n + dsreg() + 16) & 0xFFF0) + 16;
-        return(execall(cmd, tail, n));
-#endif
-
 #if LATTICE
         return(forklp(cmd, tail, (char *)NULL));
 #endif

@@ -78,22 +78,22 @@ int eolchar;
 }
 
 /*	ectoc:	expanded character to character
-		colapse the CTRL and SPEC flags back into an ascii code   */
+		colapse the Ctrl and SPEC flags back into an ascii code   */
 
 ectoc(c)
 
 int c;
 
 {
-	if (c & CTRL)
-		c = c & ~(CTRL | 0x40);
+	if (c & Ctrl)
+		c = c & ~(Ctrl | 0x40);
 	if (c & SPEC)
 		c= c & 255;
 	return(c);
 }
 
 /*	ctoec:	character to extended character
-		pull out the CTRL and SPEC prefixes (if possible)	*/
+		pull out the Ctrl and SPEC prefixes (if possible)	*/
 
 ctoec(c)
 
@@ -101,7 +101,7 @@ int c;
 
 {
         if (c>=0x00 && c<=0x1F)
-                c = CTRL | (c+'@');
+                c = Ctrl | (c+'@');
         return (c);
 }
 
@@ -289,7 +289,7 @@ int tgetc()
 }
 
 /*	GET1KEY:	Get one keystroke. The only prefixs legal here
-			are the SPEC and CTRL prefixes.
+			are the SPEC and Ctrl prefixes.
 								*/
 
 get1key()
@@ -307,7 +307,7 @@ get1key()
 	if (c == 0) {				/* Apply SPEC prefix	*/
 	        c = tgetc();
 	        if (c>=0x00 && c<=0x1F)		/* control key? */
-        	        c = CTRL | (c+'@');
+        	        c = Ctrl | (c+'@');
 		return(SPEC | c);
 	}
 #endif
@@ -359,7 +359,7 @@ get1key()
 #endif
 
         if (c>=0x00 && c<=0x1F)                 /* C0 control -> C-     */
-                c = CTRL | (c+'@');
+                c = Ctrl | (c+'@');
 
         return (c);
 }
@@ -396,7 +396,7 @@ getcmd()
 	        if (islower(c))		/* Force to upper */
         	        c ^= DIFCASE;
 	        if (c>=0x00 && c<=0x1F)		/* control key */
-	        	c = CTRL | (c+'@');
+	        	c = Ctrl | (c+'@');
 #if	1	/* temporary ESC sequence fix......... */
 		if ((c == '[') || (c == 'O')) {
 			c = get1key();
@@ -412,7 +412,7 @@ getcmd()
 	        if (c>='a' && c<='z')		/* Force to upper */
         	        c -= 0x20;
 	        if (c>=0x00 && c<=0x1F)		/* control key */
-	        	c = CTRL | (c+'@');
+	        	c = Ctrl | (c+'@');
 		return(CTLX | c);
 	}
 
@@ -446,8 +446,8 @@ int eolchar;
 		c = get1key();
 
 		/* If it is a <ret>, change it to a <NL>, unless quoting */
-		if ((c == (CTRL | 0x4d)) && !quotef)
-			c = CTRL | 0x40 | '\n';
+		if ((c == (Ctrl | 0x4d)) && !quotef)
+			c = Ctrl | 0x40 | '\n';
 
 		/* if they hit the line terminate, wrap it up */
 		if (c == eolchar && quotef == FALSE) {

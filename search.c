@@ -1218,7 +1218,7 @@ litcase:			mcptr->mc_type = LITCHAR;
 			movmem(--mcptr, rtpcm++, sizeof (MC));
 #endif
 
-#if	MWC86 | AZTEC | MSC | TURBO | VMS | USG | BSD | V7
+#if	AZTEC | MSC | TURBO | VMS | USG | BSD | V7
 			*rtpcm++ = *--mcptr;
 #endif
 		}
