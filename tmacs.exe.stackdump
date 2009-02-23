@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=3F5B455C
+eax=00000000 ebx=00000000 ecx=61138E60 edx=00000000 esi=610FE1A0 edi=004156B0
+ebp=3D65763A esp=0022CC30 program=r:\work\sarnat\src\tmacs\tmacs.exe, pid 1844, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+      2 [main] tmacs 1844 _cygtls::handle_exceptions: Error while dumping state (probably corrupted stack)

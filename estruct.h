@@ -1,3 +1,6 @@
+/* HP-uX 11.0, Solaris 8: USG=1 TERMIOS=0 BSD=0 */
+/* Linux: USG=0 TERMIOS=1 BSD=1 */
+
 /*	ESTRUCT:	Structure and preprocesser defined for
 			MicroEMACS 3.9
 
@@ -38,7 +41,7 @@
 #define	VERSION		"3.9"
 #else
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0"
+#define	VERSION		"1.0.2"
 #endif
 
 /*	Machine/OS definitions			*/
@@ -83,7 +86,6 @@
 #define	IBMPC	0			/* IBM-PC CGA/MONO/EGA driver	*/
 #define	DG10	0			/* Data General system/10	*/
 #define	TIPC	0			/* TI Profesional PC driver	*/
-#define	Z309	0			/* Zenith 100 PC family	driver	*/
 #define	MAC	0			/* Macintosh			*/
 #define	ATARI	0			/* Atari 520/1040ST screen	*/
 
@@ -92,7 +94,7 @@
 #define	CTAGS	1	/* do ctags?					*/
 #define CVMVAS  1	/* arguments to page forward/back in pages	*/
 #define	CLRMSG	1	/* space clears the message line with no insert	*/
-#define	CFENCE	1	/* fench matching in CMODE			*/
+#define	CFENCE	1	/* fence matching in CMODE			*/
 #define	TYPEAH	1	/* type ahead causes update to be skipped	*/
 #define DEBUGM	0	/* $debug triggers macro debugging		*/
 #define	VISMAC	0	/* update display during keyboard macros	*/
@@ -218,7 +220,7 @@ union REGS {
 
 /*	define some ability flags */
 
-#if	IBMPC | Z309
+#if	IBMPC
 #define	MEMMAP	1
 #else
 #define	MEMMAP	0
@@ -500,7 +502,7 @@ typedef struct  {
 	short	t_margin;		/* min margin for extended lines*/
 	short	t_scrsiz;		/* size of scroll region "	*/
 	int	t_pause;		/* # times thru update to pause */
-        int     (*t_open)();            /* Open terminal at the start.  */
+        int     (*t_open)(void);            /* Open terminal at the start.  */
         int     (*t_close)();           /* Close terminal at end.       */
 	int	(*t_kopen)();		/* Open keyboard		*/
 	int	(*t_kclose)();		/* close keyboard		*/

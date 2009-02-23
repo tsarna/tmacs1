@@ -9,7 +9,7 @@
 #include	"edef.h"
 #include	"epath.h"
 
-extern int meta(), cex(), unarg(), ctrlg(); /* dummy prefix binding functions */
+extern int metakey(), cex(), unarg(), ctrlg(); /* dummy prefix binding functions */
 
 help(f, n)	/* give me some help!!!!
 		   bring up a fake buffer and read the help file
@@ -109,7 +109,7 @@ int f, n;	/* command arguments [IGNORED] */
 	ostring(" ");
 
 	/* get the command sequence to bind */
-	c = getckey((kfunc == meta) || (kfunc == cex) ||
+	c = getckey((kfunc == metakey) || (kfunc == cex) ||
 	            (kfunc == unarg) || (kfunc == ctrlg));
 
 	/* change it to something we can print as well */
@@ -119,7 +119,7 @@ int f, n;	/* command arguments [IGNORED] */
 	ostring(outseq);
 
 	/* if the function is a prefix key */
-	if (kfunc == meta || kfunc == cex ||
+	if (kfunc == metakey || kfunc == cex ||
 	    kfunc == unarg || kfunc == ctrlg) {
 
 		/* search for an existing binding for the prefix key */
@@ -131,7 +131,7 @@ int f, n;	/* command arguments [IGNORED] */
 		}
 
 		/* reset the appropriate global prefix variable */
-		if (kfunc == meta)
+		if (kfunc == metakey)
 			metac = c;
 		if (kfunc == cex)
 			ctlxc = c;

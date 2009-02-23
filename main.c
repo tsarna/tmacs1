@@ -1389,7 +1389,7 @@ nullproc()	/* user function that does NOTHING */
 {
 }
 
-meta()	/* dummy function for binding to meta prefix */
+metakey()	/* dummy function for binding to meta prefix */
 {
 }
 

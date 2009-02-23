@@ -52,21 +52,28 @@ vtinit()
     register int i;
     register VIDEO *vp;
 
+write(2, "0", 1);
     TTopen();		/* open the screen */
+write(2, "333", 3);
     TTkopen();		/* open the keyboard */
+write(2, "4444", 4);
     TTrev(FALSE);
+write(2, "55555", 5);
     vscreen = (VIDEO **) malloc(term.t_mrow*sizeof(VIDEO *));
+write(2, "666666", 6);
 
     if (vscreen == NULL)
         exit(1);
 
 #if	MEMMAP == 0
+write(2, "7777777", 6);
     pscreen = (VIDEO **) malloc(term.t_mrow*sizeof(VIDEO *));
 
     if (pscreen == NULL)
         exit(1);
 #endif
 
+write(2, "88888888", 8);
     for (i = 0; i < term.t_mrow; ++i)
         {
         vp = (VIDEO *) malloc(sizeof(VIDEO)+term.t_mcol);
@@ -90,6 +97,7 @@ vtinit()
         pscreen[i] = vp;
 #endif
         }
+write(2, "999999999", 9);
 }
 
 /*

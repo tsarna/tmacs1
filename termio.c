@@ -91,6 +91,23 @@ struct	termio	ntermio;	/* charactoristics to use inside */
 #include	<termios.h>
 struct	termios	otermios;	/* original terminal characteristics */
 struct	termios	ntermios;	/* charactoristics to use inside */
+
+#ifndef TCSASOFT
+#define TCSASOFT 0
+#endif
+
+#if 1
+void
+cfmakeraw(struct termios *t)
+{
+        t->c_iflag &= ~(IMAXBEL|IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|
+                ICRNL|IXON);
+        t->c_oflag &= ~OPOST;
+        t->c_lflag &= ~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);
+        t->c_cflag &= ~(CSIZE|PARENB);
+        t->c_cflag |= CS8;
+}
+#endif
 #endif
 
 #if (V7 | BSD) & !TERMIOS
@@ -218,7 +235,7 @@ ttopen()
 	tcsetattr(0, TCSASOFT|TCSAFLUSH, &ntermios);
 #endif
 
-#if     (V7 | BSD) & !TERMIOS
+#if     (V7 | BSD) && !TERMIOS
         gtty(0, &ostate);                       /* save old state */
         gtty(0, &nstate);                       /* get base of new state */
         nstate.sg_flags |= RAW;
@@ -227,7 +244,7 @@ ttopen()
 	ioctl(0, TIOCGETC, &otchars);		/* Save old characters */
 	ioctl(0, TIOCSETC, &ntchars);		/* Place new character into K */
 #endif
-#if	BSD
+#if	BSD && 0
 	/* provide a smaller terminal output buffer so that
 	   the type ahead detection works better (more often) */
 	setbuffer(stdout, &tobuf[0], TBUFSIZ);
@@ -541,7 +558,7 @@ typahead()
 	return(TRUE);
 #endif
 
-#if	BSD
+#if	BSD && 0
 	int x;	/* holds # of pending chars */
 
 	return((ioctl(0,FIONREAD,&x) < 0) ? 0 : x);

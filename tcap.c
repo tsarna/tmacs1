@@ -39,15 +39,15 @@ extern	int	tcapfcol();
 extern	int	tcapbcol();
 #endif
 
-#define TCAPSLEN 315
+#define TCAPSLEN 1024
 char tcapbuf[TCAPSLEN];
 char *UP, PC, *CM, *CE, *CL, *SO, *SE, *TI, *TE;
 
 TERM term = {
-	NULL,	/* these four values are set dynamically at open time */
-	NULL,
-	NULL,
-	NULL,
+	0,	/* these four values are set dynamically at open time */
+	0,
+	0,
+	0,
 	MARGIN,
 	SCRSIZ,
 	NPAUSE,
@@ -70,12 +70,13 @@ TERM term = {
 #endif
 };
 
-tcapopen()
+int
+tcapopen(void)
 
 {
         char *getenv();
         char *t, *p, *tgetstr();
-        char tcbuf[1024];
+        char tcbuf[2048];
         char *tv_stype;
         char err_str[72];
 
@@ -136,7 +137,11 @@ tcapopen()
                 exit(1);
         }
         ttopen();
+        write(2, "1", 1);
 	putpad(TI);
+        write(2, "22", 2);
+
+        return 0;
 }
 
 

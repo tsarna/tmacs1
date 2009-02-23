@@ -35,7 +35,7 @@ KEYTAB  keytab[NBINDS] = {
 	{CTRL|'X',		cex},
 	{CTRL|'Y',		yank},
 	{CTRL|'Z',		backpage},
-	{CTRL|']',		meta},
+	{CTRL|']',		metakey},
 	{CTLX|CTRL|'B',		listbuffers},
 	{CTLX|CTRL|'C',		quit},          /* Hard quit.           */
 #if	AEDIT

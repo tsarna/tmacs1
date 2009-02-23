@@ -157,7 +157,7 @@ extern	int	cbuf40();
 extern	int	storemac();		/* store text for macro		*/
 extern	int	resize();		/* resize current window	*/
 extern	int	clrmes();		/* clear the message line	*/
-extern	int	meta();			/* meta prefix dummy function	*/
+extern	int	metakey();		/* meta prefix dummy function	*/
 extern	int	cex();			/* ^X prefix dummy function	*/
 extern	int	unarg();		/* ^U repeat arg dummy function	*/
 extern	int	istring();		/* insert string in text	*/
@@ -372,7 +372,7 @@ NBIND	names[] = {
 	{"label-function-key",		fnclabel},
 #endif
 	{"list-buffers",		listbuffers},
-	{"meta-prefix",			meta},
+	{"meta-prefix",			metakey},
 	{"move-window-down",		mvdnwind},
 	{"move-window-up",		mvupwind},
 	{"name-buffer",			namebuffer},

@@ -1,0 +1,499 @@
+**********************************************
+Program name: r:\work\sarnat\src\tmacs\tmacs.exe (pid 3696, ppid 1)
+App version:  1005.20, api: 0.156
+DLL version:  1005.20, api: 0.156
+DLL build:    2006-07-01 02:22
+OS version:   Windows NT-5.2
+Heap size:    402653184
+Date/Time:    2006-07-12 16:45:33
+**********************************************
+  487    4121 [main] tmacs 3696 set_myself: myself->dwProcessId 3696
+  488    4609 [main] tmacs 3696 time: 1152737133 = time (0)
+ 1169    5778 [main] tmacs 3696 environ_init: GetEnvironmentStrings returned 0x4359D8 - "=C:=C:\cygwin\bin"
+  608    6386 [main] tmacs 3696 environ_init: 0x770238: !C:=C:\cygwin\bin
+  472    6858 [main] tmacs 3696 environ_init: 0x770250: ALLUSERSPROFILE=C:\Documents and Settings\All Users
+  499    7357 [main] tmacs 3696 environ_init: 0x770288: APPDATA=C:\Documents and Settings\sarnat\Application Data
+  473    7830 [main] tmacs 3696 environ_init: 0x7702C8: CLIENTNAME=ginrin
+  500    8330 [main] tmacs 3696 environ_init: 0x7702E0: CLUSTERLOG=C:\WINDOWS\Cluster\cluster.log
+  472    8802 [main] tmacs 3696 environ_init: 0x770310: COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  500    9302 [main] tmacs 3696 environ_init: 0x770350: COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  473    9775 [main] tmacs 3696 environ_init: 0x770390: COMMONPROGRAMW6432=C:\Program Files\Common Files
+  741   10516 [main] tmacs 3696 environ_init: 0x7703C8: COMPUTERNAME=WIZARD
+  476   10992 [main] tmacs 3696 environ_init: 0x7703E0: COMSPEC=C:\WINDOWS\system32\cmd.exe
+  499   11491 [main] tmacs 3696 environ_init: 0x770408: CVSROOT=:pserver:sarnat@vcs:/src/MASTER
+  473   11964 [main] tmacs 3696 environ_init: 0x770438: CVS_RSH=/bin/ssh
+  741   12705 [main] tmacs 3696 environ_init: 0x770450: EDITOR=/cygdrive/c/opt/opt/emacs-20.3.1/bin/emacs
+  475   13180 [main] tmacs 3696 environ_init: 0x770488: FP_NO_HOST_CHECK=NO
+  509   13689 [main] tmacs 3696 getwinenv: can't set native for HOME= since no environ yet
+  469   14158 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\home\sarnat, no-keep-rel, no-add-slash)
+  434   14592 [main] tmacs 3696 normalize_win32_path: C:\cygwin\home\sarnat = normalize_win32_path (C:\cygwin\home\sarnat)
+  483   15075 [main] tmacs 3696 mount_info::conv_to_posix_path: /home/sarnat = conv_to_posix_path (C:\cygwin\home\sarnat)
+  864   15939 [main] tmacs 3696 win_env::add_cache: posix /home/sarnat
+  590   16529 [main] tmacs 3696 win_env::add_cache: native HOME=C:\cygwin\home\sarnat
+  483   17012 [main] tmacs 3696 posify: env var converted to HOME=/home/sarnat
+  499   17511 [sig] tmacs 3696 wait_sig: entering ReadFile loop, my_readsig 0x0, my_sendsig 0x0
+   59   17570 [main] tmacs 3696 environ_init: 0x7704C0: HOME=/home/sarnat
+  961   18531 [main] tmacs 3696 environ_init: 0x7704A0: HOMEDRIVE=C:
+  501   19032 [main] tmacs 3696 environ_init: 0x770608: HOMEPATH=\Documents and Settings\sarnat
+  472   19504 [main] tmacs 3696 environ_init: 0x770638: HOSTNAME=wizard
+  499   20003 [main] tmacs 3696 environ_init: 0x770650: INFOPATH=/usr/local/info:/usr/share/info:/usr/info:
+  473   20476 [main] tmacs 3696 environ_init: 0x770688: LOGONSERVER=\\CORPNYWP1
+  499   20975 [main] tmacs 3696 environ_init: 0x7706A8: MAKE_MODE=unix
+  474   21449 [main] tmacs 3696 environ_init: 0x7706C0: MANPATH=/usr/local/man:/usr/share/man:/usr/man::/usr/ssl/man:/usr/share/qt3/doc/man:/usr/X11R6/man
+  498   21947 [main] tmacs 3696 environ_init: 0x770728: NUMBER_OF_PROCESSORS=8
+  474   22421 [main] tmacs 3696 environ_init: 0x770748: OLDPWD=/work/sarnat/src
+  501   22922 [main] tmacs 3696 environ_init: 0x770768: OS=Windows_NT
+  473   23395 [main] tmacs 3696 getwinenv: can't set native for PATH= since no environ yet
+  442   23837 [main] tmacs 3696 normalize_posix_path: src .
+  475   24312 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (r:\work\sarnat\src\tmacs, no-keep-rel, no-add-slash)
+  482   24794 [main] tmacs 3696 normalize_win32_path: r:\work\sarnat\src\tmacs = normalize_win32_path (r:\work\sarnat\src\tmacs)
+  493   25287 [main] tmacs 3696 mount_info::conv_to_posix_path: /frame/work/sarnat/src/tmacs = conv_to_posix_path (r:\work\sarnat\src\tmacs)
+  491   25778 [main] tmacs 3696 cwdstuff::get: posix /frame/work/sarnat/src/tmacs
+  481   26259 [main] tmacs 3696 cwdstuff::get: (/frame/work/sarnat/src/tmacs) = cwdstuff::get (0x22C890, 260, 1, 0), errno 0
+  482   26741 [main] tmacs 3696 normalize_posix_path: /frame/work/sarnat/src/tmacs/ = normalize_posix_path (.)
+  486   27227 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs)
+  503   27730 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  714   28444 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs, dst r:\work\sarnat\src\tmacs, flags 0xA, rc 0
+  669   29113 [main] tmacs 3696 symlink_info::check: not a symlink
+  548   29661 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs, 0x22C550) (0xA)
+ 1411   31072 [main] tmacs 3696 set_privilege: 1 = set_privilege ((token 2A4) SeChangeNotifyPrivilege, 1)
+ 1802   32874 [main] tmacs 3696 path_conv::check: this->path(r:\work\sarnat\src\tmacs), has_acls(0)
+  518   33392 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\usr\local\bin, keep-rel, no-add-slash)
+  402   33794 [main] tmacs 3696 normalize_win32_path: C:\cygwin\usr\local\bin = normalize_win32_path (C:\cygwin\usr\local\bin)
+  487   34281 [main] tmacs 3696 mount_info::conv_to_posix_path: /usr/local/bin = conv_to_posix_path (C:\cygwin\usr\local\bin)
+  486   34767 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\bin, keep-rel, no-add-slash)
+  486   35253 [main] tmacs 3696 normalize_win32_path: C:\cygwin\bin = normalize_win32_path (C:\cygwin\bin)
+  487   35740 [main] tmacs 3696 mount_info::conv_to_posix_path: /usr/bin = conv_to_posix_path (C:\cygwin\bin)
+  485   36225 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\bin, keep-rel, no-add-slash)
+  487   36712 [main] tmacs 3696 normalize_win32_path: C:\cygwin\bin = normalize_win32_path (C:\cygwin\bin)
+  487   37199 [main] tmacs 3696 mount_info::conv_to_posix_path: /usr/bin = conv_to_posix_path (C:\cygwin\bin)
+  486   37685 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\usr\X11R6\bin, keep-rel, no-add-slash)
+  485   38170 [main] tmacs 3696 normalize_win32_path: C:\cygwin\usr\X11R6\bin = normalize_win32_path (C:\cygwin\usr\X11R6\bin)
+  488   38658 [main] tmacs 3696 mount_info::conv_to_posix_path: /usr/X11R6/bin = conv_to_posix_path (C:\cygwin\usr\X11R6\bin)
+  487   39145 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS\system32, keep-rel, no-add-slash)
+  485   39630 [main] tmacs 3696 normalize_win32_path: c:\WINDOWS\system32 = normalize_win32_path (c:\WINDOWS\system32)
+  487   40117 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS/system32 = conv_to_posix_path (c:\WINDOWS\system32)
+  486   40603 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS, keep-rel, no-add-slash)
+  486   41089 [main] tmacs 3696 normalize_win32_path: c:\WINDOWS = normalize_win32_path (c:\WINDOWS)
+  488   41577 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS = conv_to_posix_path (c:\WINDOWS)
+  485   42062 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS\System32\Wbem, keep-rel, no-add-slash)
+  487   42549 [main] tmacs 3696 normalize_win32_path: c:\WINDOWS\System32\Wbem = normalize_win32_path (c:\WINDOWS\System32\Wbem)
+  488   43037 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS/System32/Wbem = conv_to_posix_path (c:\WINDOWS\System32\Wbem)
+  486   43523 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\, keep-rel, add-slash)
+  486   44009 [main] tmacs 3696 normalize_win32_path: c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\ = normalize_win32_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\)
+  729   44738 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/ = conv_to_posix_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\)
+  486   45224 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\lib\lapack, keep-rel, no-add-slash)
+  729   45953 [main] tmacs 3696 normalize_win32_path: C:\cygwin\lib\lapack = normalize_win32_path (C:\cygwin\lib\lapack)
+  572   46525 [main] tmacs 3696 mount_info::conv_to_posix_path: /usr/lib/lapack = conv_to_posix_path (C:\cygwin\lib\lapack)
+  401   46926 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\cygwin\bin, keep-rel, no-add-slash)
+  488   47414 [main] tmacs 3696 normalize_win32_path: C:\cygwin\cygwin\bin = normalize_win32_path (C:\cygwin\cygwin\bin)
+  485   47899 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygwin/bin = conv_to_posix_path (C:\cygwin\cygwin\bin)
+  620   48519 [main] tmacs 3696 win_env::add_cache: posix /usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  599   49118 [main] tmacs 3696 win_env::add_cache: native PATH=C:\cygwin\usr\local\bin;C:\cygwin\bin;C:\cygwin\bin;C:\cygwin\usr\X11R6\bin;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\cygwin\lib\lapack;C:\cygwin\cygwin\bin
+  484   49602 [main] tmacs 3696 posify: env var converted to PATH=/usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  549   50151 [main] tmacs 3696 environ_init: 0x770878: PATH=/usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  499   50650 [main] tmacs 3696 environ_init: 0x770780: PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
+  471   51121 [main] tmacs 3696 environ_init: 0x7707C0: PKG_CONFIG_PATH=/usr/X11R6/lib/pkgconfig
+  501   51622 [main] tmacs 3696 environ_init: 0x7707F0: PRINTER=
+  473   52095 [main] tmacs 3696 environ_init: 0x770800: PROCESSOR_ARCHITECTURE=x86
+  500   52595 [main] tmacs 3696 environ_init: 0x770820: PROCESSOR_ARCHITEW6432=AMD64
+  473   53068 [main] tmacs 3696 environ_init: 0x770DA0: PROCESSOR_IDENTIFIER=EM64T Family 15 Model 4 Stepping 8, GenuineIntel
+  742   53810 [main] tmacs 3696 environ_init: 0x770848: PROCESSOR_LEVEL=15
+  474   54284 [main] tmacs 3696 environ_init: 0x770DF0: PROCESSOR_REVISION=0408
+  499   54783 [main] tmacs 3696 environ_init: 0x770E10: PROGRAMFILES(X86)=C:\Program Files (x86)
+  474   55257 [main] tmacs 3696 environ_init: 0x770E40: PROGRAMFILES=C:\Program Files (x86)
+  499   55756 [main] tmacs 3696 environ_init: 0x770E68: PROGRAMW6432=C:\Program Files
+  473   56229 [main] tmacs 3696 environ_init: 0x770860: PROMPT=$P$G
+  499   56728 [main] tmacs 3696 environ_init: 0x770E90: PS1=: wizard; 
+  474   57202 [main] tmacs 3696 environ_init: 0x770EA8: PWD=/work/sarnat/src/tmacs
+  500   57702 [main] tmacs 3696 environ_init: 0x770EC8: QMAKESPEC=/usr/lib/qt3/mkspecs/cygwin-g++
+  473   58175 [main] tmacs 3696 environ_init: 0x770EF8: QTDIR=/usr/lib/qt3
+  498   58673 [main] tmacs 3696 environ_init: 0x770F10: SESSIONNAME=RDP-Tcp#31
+  474   59147 [main] tmacs 3696 environ_init: 0x770F30: SHLVL=1
+  501   59648 [main] tmacs 3696 environ_init: 0x770F40: SYSTEMDRIVE=C:
+  714   60362 [main] tmacs 3696 environ_init: 0x770F58: SYSTEMROOT=C:\WINDOWS
+  502   60864 [main] tmacs 3696 getwinenv: can't set native for TEMP= since no environ yet
+  478   61342 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3, no-keep-rel, no-add-slash)
+  424   61766 [main] tmacs 3696 normalize_win32_path: C:\DOCUME~1\sarnat\LOCALS~1\Temp\3 = normalize_win32_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3)
+  494   62260 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3 = conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3)
+  605   62865 [main] tmacs 3696 win_env::add_cache: posix /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  356   63221 [main] tmacs 3696 win_env::add_cache: native TEMP=C:\DOCUME~1\sarnat\LOCALS~1\Temp\3
+  487   63708 [main] tmacs 3696 posify: env var converted to TEMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  548   64256 [main] tmacs 3696 environ_init: 0x770FA8: TEMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  501   64757 [main] tmacs 3696 environ_init: 0x770F78: TERM=cygwin
+  471   65228 [main] tmacs 3696 environ_init: 0x770F88: TEXDOCVIEW_DVI=cygstart %s
+  522   65750 [main] tmacs 3696 environ_init: 0x771118: TEXDOCVIEW_HTML=cygstart %s
+  459   66209 [main] tmacs 3696 environ_init: 0x771138: TEXDOCVIEW_PDF=cygstart %s
+  492   66701 [main] tmacs 3696 environ_init: 0x771158: TEXDOCVIEW_PS=cygstart %s
+  473   67174 [main] tmacs 3696 environ_init: 0x771178: TEXDOCVIEW_TXT=cygstart %s
+  500   67674 [main] tmacs 3696 getwinenv: can't set native for TMP= since no environ yet
+  474   68148 [main] tmacs 3696 mount_info::conv_to_posix_path: conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3, no-keep-rel, no-add-slash)
+  428   68576 [main] tmacs 3696 normalize_win32_path: C:\DOCUME~1\sarnat\LOCALS~1\Temp\3 = normalize_win32_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3)
+  484   69060 [main] tmacs 3696 mount_info::conv_to_posix_path: /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3 = conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\3)
+  615   69675 [main] tmacs 3696 win_env::add_cache: posix /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  598   70273 [main] tmacs 3696 win_env::add_cache: native TMP=C:\DOCUME~1\sarnat\LOCALS~1\Temp\3
+  489   70762 [main] tmacs 3696 posify: env var converted to TMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  546   71308 [main] tmacs 3696 environ_init: 0x7711C8: TMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/3
+  500   71808 [main] tmacs 3696 environ_init: 0x771198: USER=SarnaT
+  473   72281 [main] tmacs 3696 environ_init: 0x7711A8: USERDNSDOMAIN=CORP.EMC.COM
+  499   72780 [main] tmacs 3696 environ_init: 0x771338: USERDOMAIN=CORP
+  474   73254 [main] tmacs 3696 environ_init: 0x771350: USERNAME=sarnat
+  500   73754 [main] tmacs 3696 environ_init: 0x771368: USERPROFILE=C:\Documents and Settings\sarnat
+  473   74227 [main] tmacs 3696 environ_init: 0x7713A0: VS80COMNTOOLS=C:\MSDEV80\Common7\Tools\
+  500   74727 [main] tmacs 3696 environ_init: 0x7713D0: WINDIR=C:\WINDOWS
+  472   75199 [main] tmacs 3696 environ_init: 0x7713E8: _=/usr/bin/strace.exe
+  455   75654 [main] tmacs 3696 pinfo_init: Set nice to 0
+  459   76113 [main] tmacs 3696 pinfo_init: pid 3696, pgid 3696
+ 1068   77181 [main] tmacs 3696 set_privilege: 0 = set_privilege ((token 2C8) SeRestorePrivilege, 1)
+ 1324   78505 [main] tmacs 3696 set_privilege: 0 = set_privilege ((token 2C8) SeBackupPrivilege, 1)
+  544   79049 [main] tmacs 3696 set_privilege: 1 = set_privilege ((token 2C8) SeChangeNotifyPrivilege, 1)
+  543   79592 [main] tmacs 3696 dtable::extend: size 32, fds 0x6116370C
+  433   80025 [main] tmacs 3696 normalize_posix_path: src /etc/passwd
+ 2169   82194 [main] tmacs 3696 normalize_posix_path: /etc/passwd = normalize_posix_path (/etc/passwd)
+  487   82681 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/passwd)
+  487   83168 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  485   83653 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /etc/passwd, dst C:\cygwin\etc\passwd, flags 0xA, rc 0
+  539   84192 [main] tmacs 3696 symlink_info::check: not a symlink
+  435   84627 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\passwd, 0x22C610) (0xA)
+  533   85160 [main] tmacs 3696 set_privilege: 1 = set_privilege ((token 29C) SeChangeNotifyPrivilege, 1)
+  612   85772 [main] tmacs 3696 path_conv::check: this->path(C:\cygwin\etc\passwd), has_acls(1)
+  733   86505 [main] tmacs 3696 etc::test_file_change: FindFirstFile succeeded
+ 1054   87559 [main] tmacs 3696 pwdgrp::load: /etc/passwd curr_lines 10
+  469   88028 [main] tmacs 3696 pwdgrp::load: /etc/passwd load succeeded
+  517   88545 [main] tmacs 3696 normalize_posix_path: src /etc/group
+  458   89003 [main] tmacs 3696 normalize_posix_path: /etc/group = normalize_posix_path (/etc/group)
+  487   89490 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/group)
+  492   89982 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  725   90707 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /etc/group, dst C:\cygwin\etc\group, flags 0xA, rc 0
+  525   91232 [main] tmacs 3696 symlink_info::check: not a symlink
+  448   91680 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\group, 0x22C5E0) (0xA)
+  486   92166 [main] tmacs 3696 path_conv::check: this->path(C:\cygwin\etc\group), has_acls(1)
+  623   92789 [main] tmacs 3696 etc::test_file_change: FindFirstFile succeeded
+ 1227   94016 [main] tmacs 3696 pwdgrp::load: /etc/group curr_lines 21
+  584   94600 [main] tmacs 3696 pwdgrp::load: /etc/group load succeeded
+  511   95111 [main] tmacs 3696 internal_getlogin: SetTokenInformation(TokenPrimaryGroup), Win32 error 1308
+  471   95582 [main] tmacs 3696 internal_getlogin: SetTokenInformation(TokenPrimaryGroup), Win32 error 1308
+  474   96056 [main] tmacs 3696 cygheap_user::ontherange: what 2, pw 0x771A08
+  506   96562 [main] tmacs 3696 cygheap_user::ontherange: HOME is already in the environment /home/sarnat
+  572   97134 [main] tmacs 3696 wait_for_sigthread: wait_sig_inited 0x3B8
+  426   97560 [main] tmacs 3696 wait_for_sigthread: process/signal handling enabled, state 0x41
+  688   98248 [main] tmacs 3696 build_argv: argv[0] = 'tmacs.exe'
+  486   98734 [main] tmacs 3696 build_argv: argc 1
+  616   99350 [main] tmacs 3696 build_fh_pc: fh 0x61163874
+  417   99767 [main] tmacs 3696 open_shared: name (null), n 0, shared 0x60020000 (wanted 0x60020000), h 0x3B8
+  436  100203 [main] tmacs 3696 _pinfo::set_ctty: old no ctty
+  488  100691 [main] tmacs 3696 _pinfo::set_ctty: attaching ctty /dev/console sid 3696, pid 3696, pgid 3696, tty->pgid 0, tty->sid 3696
+ 1827  102518 [main] tmacs 3696 fhandler_base::set_flags: flags 0x10002, supplied_bin 0x0
+  603  103121 [main] tmacs 3696 fhandler_base::set_flags: O_TEXT/O_BINARY set in flags 0x10000
+  478  103599 [main] tmacs 3696 fhandler_base::set_flags: filemode set to binary
+  667  104266 [main] tmacs 3696 init_cygheap::manage_console_count: fhandler_console::open: console_count 1, amount 1, ctty /dev/console, avoid_freeing_console 0
+  545  104811 [main] tmacs 3696 fhandler_console::open: opened conin$ 0xF, conout$ 0x13
+  551  105362 [main] tmacs 3696 fhandler_console::output_tcsetattr: 0 = tcsetattr (,6002001C) (ENABLE FLAGS 3) (lflag 107 oflag 9)
+  770  106132 [main] tmacs 3696 handle_to_fn: NtQueryObject failed
+  393  106525 [main] tmacs 3696 normalize_posix_path: src some disk file
+  478  107003 [main] tmacs 3696 cwdstuff::get: posix /frame/work/sarnat/src/tmacs
+  486  107489 [main] tmacs 3696 cwdstuff::get: (/frame/work/sarnat/src/tmacs) = cwdstuff::get (0x224500, 260, 1, 0), errno 0
+  485  107974 [main] tmacs 3696 normalize_posix_path: /frame/work/sarnat/src/tmacs/some disk file = normalize_posix_path (some disk file)
+  487  108461 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs/some disk file)
+  596  109057 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  377  109434 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs/some disk file, dst r:\work\sarnat\src\tmacs\some disk file, flags 0xA, rc 0
+ 3153  112587 [main] tmacs 3696 symlink_info::check: GetFileAttributes (r:\work\sarnat\src\tmacs\some disk file) failed
+  497  113084 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+ 2662  115746 [main] tmacs 3696 symlink_info::check: GetFileAttributes (r:\work\sarnat\src\tmacs\some disk file.lnk) failed
+  498  116244 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+  486  116730 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs\some disk file, 0x2241C0) (0xA)
+  486  117216 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs)
+  490  117706 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  484  118190 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs, dst r:\work\sarnat\src\tmacs, flags 0xA, rc 0
+ 2169  120359 [main] tmacs 3696 symlink_info::check: not a symlink
+  506  120865 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs, 0x2241C0) (0xA)
+  489  121354 [main] tmacs 3696 path_conv::check: this->path(r:\work\sarnat\src\tmacs\some disk file), has_acls(0)
+  488  121842 [main] tmacs 3696 build_fh_pc: fh 0x61163A7C
+  488  122330 [main] tmacs 3696 fhandler_base::set_flags: flags 0x2, supplied_bin 0x0
+  481  122811 [main] tmacs 3696 fhandler_base::set_flags: filemode set to binary
+  485  123296 [main] tmacs 3696 fhandler_base::init: created new fhandler_base for handle 0x270, bin 1
+  644  123940 [main] tmacs 3696 build_fh_pc: fh 0x61163C84
+  642  124582 [main] tmacs 3696 fhandler_base::set_flags: flags 0x10002, supplied_bin 0x0
+  675  125257 [main] tmacs 3696 fhandler_base::set_flags: O_TEXT/O_BINARY set in flags 0x10000
+  474  125731 [main] tmacs 3696 fhandler_base::set_flags: filemode set to binary
+  601  126332 [main] tmacs 3696 init_cygheap::manage_console_count: fhandler_console::open: console_count 2, amount 1, ctty /dev/console, avoid_freeing_console 0
+  613  126945 [main] tmacs 3696 fhandler_console::open: opened conin$ 0xB, conout$ 0x2B
+  532  127477 [main] tmacs 3696 fhandler_console::output_tcsetattr: 0 = tcsetattr (,6002001C) (ENABLE FLAGS 3) (lflag 107 oflag 9)
+  558  128035 [main] tmacs 3696 fhandler_console::need_invisible: invisible_console 0
+  616  128651 [main] tmacs 3696 dll_crt0_1: user_data->main 0x40B300
+  482  129133 [main] tmacs 3696 __set_errno: void dll_crt0_1(void*):949 val 0
+ 3241  132374 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  414  132788 [main] tmacs 3696 sig_send: wakeup 0x28C
+  502  133290 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x28C
+   10  133300 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x28C
+  964  134264 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  462  134726 [main] tmacs 3696 open: open (/home/sarnat/.termcap, 0x0)
+  490  135216 [main] tmacs 3696 normalize_posix_path: src /home/sarnat/.termcap
+  484  135700 [main] tmacs 3696 normalize_posix_path: /home/sarnat/.termcap = normalize_posix_path (/home/sarnat/.termcap)
+  488  136188 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/home/sarnat/.termcap)
+  486  136674 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  487  137161 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /home/sarnat/.termcap, dst C:\cygwin\home\sarnat\.termcap, flags 0xA, rc 0
+  559  137720 [main] tmacs 3696 symlink_info::check: GetFileAttributes (C:\cygwin\home\sarnat\.termcap) failed
+  415  138135 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+  530  138665 [main] tmacs 3696 symlink_info::check: GetFileAttributes (C:\cygwin\home\sarnat\.termcap.lnk) failed
+  684  139349 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+  486  139835 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (C:\cygwin\home\sarnat\.termcap, 0x22B870) (0xA)
+  502  140337 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/home/sarnat)
+  958  141295 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  487  141782 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /home/sarnat, dst C:\cygwin\home\sarnat, flags 0xA, rc 0
+  522  142304 [main] tmacs 3696 symlink_info::check: not a symlink
+  693  142997 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (C:\cygwin\home\sarnat, 0x22B870) (0xA)
+  487  143484 [main] tmacs 3696 path_conv::check: this->path(C:\cygwin\home\sarnat\.termcap), has_acls(1)
+  490  143974 [main] tmacs 3696 build_fh_pc: fh 0x61163E8C
+  506  144480 [main] tmacs 3696 fhandler_base::open: (C:\cygwin\home\sarnat\.termcap, 0x100000)
+  560  145040 [main] tmacs 3696 seterrno_from_win_error: /netrel/src/cygwin-1.5.20-1/winsup/cygwin/fhandler.cc:668 windows error 2
+  391  145431 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+  485  145916 [main] tmacs 3696 __set_errno: void seterrno_from_win_error(const char*, int, DWORD):310 val 2
+  486  146402 [main] tmacs 3696 fhandler_base::open: C0000034 = NtCreateFile (0x0, 80100000, C:\cygwin\home\sarnat\.termcap, io, NULL, 0, 7, 1, 20, NULL, 0)
+  486  146888 [main] tmacs 3696 fhandler_base::open: 0 = fhandler_base::open (C:\cygwin\home\sarnat\.termcap, 0x100000)
+  487  147375 [main] tmacs 3696 fhandler_base::open_fs: 0 = fhandler_disk_file::open (C:\cygwin\home\sarnat\.termcap, 0x0)
+  489  147864 [main] tmacs 3696 open: -1 = open (/home/sarnat/.termcap, 0x0)
+  485  148349 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  498  148847 [main] tmacs 3696 sig_send: wakeup 0x28C
+  488  149335 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x28C
+    8  149343 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x28C
+  967  150310 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  469  150779 [main] tmacs 3696 open: open (/etc/termcap, 0x0)
+  488  151267 [main] tmacs 3696 normalize_posix_path: src /etc/termcap
+  486  151753 [main] tmacs 3696 normalize_posix_path: /etc/termcap = normalize_posix_path (/etc/termcap)
+  487  152240 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/termcap)
+  488  152728 [main] tmacs 3696 set_flags: flags: binary (0x2)
+  484  153212 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /etc/termcap, dst C:\cygwin\etc\termcap, flags 0xA, rc 0
+  536  153748 [main] tmacs 3696 symlink_info::check: not a symlink
+  438  154186 [main] tmacs 3696 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\termcap, 0x22B870) (0xA)
+  487  154673 [main] tmacs 3696 path_conv::check: this->path(C:\cygwin\etc\termcap), has_acls(1)
+  488  155161 [main] tmacs 3696 build_fh_pc: fh 0x61163E8C
+  486  155647 [main] tmacs 3696 fhandler_base::open: (C:\cygwin\etc\termcap, 0x100000)
+  615  156262 [main] tmacs 3696 fhandler_base::set_flags: flags 0x100000, supplied_bin 0x10000
+  600  156862 [main] tmacs 3696 fhandler_base::set_flags: filemode set to binary
+  485  157347 [main] tmacs 3696 fhandler_base::open: 0 = NtCreateFile (0x28C, 80100000, C:\cygwin\etc\termcap, io, NULL, 0, 7, 1, 20, NULL, 0)
+  486  157833 [main] tmacs 3696 fhandler_base::open: 1 = fhandler_base::open (C:\cygwin\etc\termcap, 0x100000)
+  486  158319 [main] tmacs 3696 fhandler_base::open_fs: 1 = fhandler_disk_file::open (C:\cygwin\etc\termcap, 0x0)
+  487  158806 [main] tmacs 3696 open: 3 = open (/etc/termcap, 0x0)
+  499  159305 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  485  159790 [main] tmacs 3696 sig_send: wakeup 0x288
+  487  160277 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  160284 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  969  161253 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  482  161735 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  476  162211 [main] tmacs 3696 readv: no need to call ready_for_read
+  525  162736 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  451  163187 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  498  163685 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  477  164162 [main] tmacs 3696 sig_send: wakeup 0x288
+  498  164660 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  164668 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+ 1206  165874 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  469  166343 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  489  166832 [main] tmacs 3696 readv: no need to call ready_for_read
+  494  167326 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  479  167805 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  493  168298 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  484  168782 [main] tmacs 3696 sig_send: wakeup 0x288
+  494  169276 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    6  169282 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  968  170250 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  715  170965 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  591  171556 [main] tmacs 3696 readv: no need to call ready_for_read
+  644  172200 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  714  172914 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  496  173410 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  479  173889 [main] tmacs 3696 sig_send: wakeup 0x288
+  498  174387 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  174394 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  964  175358 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  471  175829 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  488  176317 [main] tmacs 3696 readv: no need to call ready_for_read
+  492  176809 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  482  177291 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  491  177782 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  492  178274 [main] tmacs 3696 sig_send: wakeup 0x288
+  486  178760 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  178767 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  970  179737 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  471  180208 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  487  180695 [main] tmacs 3696 readv: no need to call ready_for_read
+  500  181195 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  473  181668 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  498  182166 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  480  182646 [main] tmacs 3696 sig_send: wakeup 0x288
+  494  183140 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  183148 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  971  184119 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  467  184586 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  487  185073 [main] tmacs 3696 readv: no need to call ready_for_read
+  493  185566 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  480  186046 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  492  186538 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  639  187177 [main] tmacs 3696 sig_send: wakeup 0x288
+  582  187759 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  187766 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  969  188735 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  472  189207 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  486  189693 [main] tmacs 3696 readv: no need to call ready_for_read
+  500  190193 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  475  190668 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  496  191164 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  481  191645 [main] tmacs 3696 sig_send: wakeup 0x288
+  496  192141 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  192149 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+ 1451  193600 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  713  194313 [main] tmacs 3696 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  488  194801 [main] tmacs 3696 readv: no need to call ready_for_read
+  494  195295 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  480  195775 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  554  196329 [main] tmacs 3696 fhandler_base::lseek: lseek (/etc/termcap, 0, 0)
+  420  196749 [main] tmacs 3696 fhandler_base::lseek: setting file pointer to 0 (high), 0 (low)
+  488  197237 [main] tmacs 3696 lseek64: 0 = lseek (3, 0, 0)
+  485  197722 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  488  198210 [main] tmacs 3696 sig_send: wakeup 0x288
+  496  198706 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  198714 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  966  199680 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  470  200150 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  975  201125 [main] tmacs 3696 readv: no need to call ready_for_read
+  493  201618 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  480  202098 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  493  202591 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  739  203330 [main] tmacs 3696 sig_send: wakeup 0x288
+  482  203812 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    6  203818 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  970  204788 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  472  205260 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  485  205745 [main] tmacs 3696 readv: no need to call ready_for_read
+  499  206244 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  475  206719 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  498  207217 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  481  207698 [main] tmacs 3696 sig_send: wakeup 0x288
+  495  208193 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  208201 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  964  209165 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  471  209636 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  488  210124 [main] tmacs 3696 readv: no need to call ready_for_read
+  492  210616 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  482  211098 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  491  211589 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  491  212080 [main] tmacs 3696 sig_send: wakeup 0x288
+  488  212568 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    6  212574 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+ 4617  217191 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  472  217663 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  487  218150 [main] tmacs 3696 readv: no need to call ready_for_read
+  498  218648 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  476  219124 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  497  219621 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  479  220100 [main] tmacs 3696 sig_send: wakeup 0x288
+  740  220840 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  220847 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  971  221818 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  466  222284 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  487  222771 [main] tmacs 3696 readv: no need to call ready_for_read
+  494  223265 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  480  223745 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  491  224236 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  486  224722 [main] tmacs 3696 sig_send: wakeup 0x288
+  491  225213 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  225220 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  972  226192 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  470  226662 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  486  227148 [main] tmacs 3696 readv: no need to call ready_for_read
+  499  227647 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  475  228122 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  497  228619 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  481  229100 [main] tmacs 3696 sig_send: wakeup 0x288
+  495  229595 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    8  229603 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  971  230574 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  464  231038 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  488  231526 [main] tmacs 3696 readv: no need to call ready_for_read
+  494  232020 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  479  232499 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  492  232991 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  492  233483 [main] tmacs 3696 sig_send: wakeup 0x288
+  668  234151 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+   12  234163 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+ 1026  235189 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  473  235662 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  485  236147 [main] tmacs 3696 readv: no need to call ready_for_read
+  743  236890 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  475  237365 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  496  237861 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  481  238342 [main] tmacs 3696 sig_send: wakeup 0x288
+  496  238838 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  238845 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  965  239810 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  713  240523 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  489  241012 [main] tmacs 3696 readv: no need to call ready_for_read
+  496  241508 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  477  241985 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  492  242477 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -34, its_me 1
+  491  242968 [main] tmacs 3696 sig_send: wakeup 0x288
+  486  243454 [main] tmacs 3696 sig_send: Waiting for pack.wakeup 0x288
+    7  243461 [sig] tmacs 3696 wait_sig: signalling pack.wakeup 0x288
+  970  244431 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -34
+  472  244903 [main] tmacs 3696 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  486  245389 [main] tmacs 3696 readv: no need to call ready_for_read
+  500  245889 [main] tmacs 3696 fhandler_base::read: returning 1024, binary mode
+  474  246363 [main] tmacs 3696 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  798  247161 [main] tmacs 3696 close: close (3)
+  418  247579 [main] tmacs 3696 fhandler_base::close: closing '/etc/termcap' handle 0x28C
+  515  248094 [main] tmacs 3696 close: 0 = close (3)
+  859  248953 [main] tmacs 3696 fhandler_console::tcgetattr: 0 = tcgetattr (0x22C5A0) enable flags 0x1F, t->lflag 0x107, t->iflag 0x502
+  655  249608 [main] tmacs 3696 tcgetattr: iflag 502, oflag 9, cflag BF, lflag 107, VMIN 1, VTIME 0
+ 1546  251154 [main] tmacs 3696 ioctl: fd 0, cmd 5
+  602  251756 [main] tmacs 3696 fhandler_console::tcgetattr: 0 = tcgetattr (0x420880) enable flags 0x1F, t->lflag 0x107, t->iflag 0x502
+  445  252201 [main] tmacs 3696 tcgetattr: iflag 502, oflag 9, cflag BF, lflag 107, VMIN 1, VTIME 0
+  487  252688 [main] tmacs 3696 ioctl: returning 0
+  485  253173 [main] tmacs 3696 ioctl: fd 0, cmd 6
+  518  253691 [main] tmacs 3696 fhandler_console::output_tcsetattr: 0 = tcsetattr (,420850) (ENABLE FLAGS 3) (lflag 0 oflag 0)
+  503  254194 [main] tmacs 3696 fhandler_console::input_tcsetattr: 0 = tcsetattr (,420850) enable flags 0x18, c_lflag 0x0 iflag 0x0
+  440  254634 [main] tmacs 3696 __set_errno: int tcsetattr(int, int, const termios*):161 val 2
+  485  255119 [main] tmacs 3696 tcsetattr: iflag 0x0, oflag 0x0, cflag 0xBF, lflag 0x0, VMIN 1, VTIME 0
+  487  255606 [main] tmacs 3696 tcsetattr: 0 = tcsetattr (0, 2, 420850)
+  485  256091 [main] tmacs 3696 ioctl: returning 0
+  489  256580 [main] tmacs 3696 fhandler_base::fcntl: GETFL: 0x10002
+  484  257064 [main] tmacs 3696 fcntl_worker: 65538 = fcntl (0, 3, 0x0)
+ 4111  261175 [main] tmacs 3696 get_file_attribute: file: r:\work\sarnat\src\tmacs\some disk file
+  520  261695 [main] tmacs 3696 fhandler_base::fstat_helper: 0 = fstat (, 0x22C630) st_atime=44B55F6D st_size=41973, st_mode=0x81A4, st_ino=-6047066337264, sizeof=96
+  480  262175 [main] tmacs 3696 fstat64: 0 = fstat (1, 0x22C630)
+--- Process 3696, exception C0000005 at 3F5B455C
+ 2121  264296 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler exc 0xC0000005 at 0x3F5B455C sp 0x22CC10
+  554  264850 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler sig 11 at 0x3F5B455C
+  491  265341 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler calling 0x0
+  483  265824 [main] tmacs 3696 _cygtls::handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+  971  266795 [main] tmacs 3696 try_to_debug: debugger_command ''
+ 3165  269960 [main] tmacs 3696 open_stackdumpfile: Dumping stack trace to tmacs.exe.stackdump
+--- Process 3696, exception C0000005 at 61016545
+ 3730  273690 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler exc 0xC0000005 at 0x61016545 sp 0x22C6DC
+  404  274094 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler sig 11 at 0x61016545
+  486  274580 [main] tmacs 3696 _cygtls::handle_exceptions: In cygwin_except_handler calling 0x0
+  482  275062 [main] tmacs 3696 _cygtls::handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+ 1702  276764 [main] tmacs 3696 _cygtls::handle_exceptions: Error while dumping state (probably corrupted stack)
+ 1751  278515 [main] tmacs 3696 inside_kernel: pc 0x61016545, h 0x61000000, inside_kernel 0
+  464  278979 [main] tmacs 3696 normalize_posix_path: src /dev/kmsg
+  463  279442 [main] tmacs 3696 normalize_posix_path: /dev/kmsg = normalize_posix_path (/dev/kmsg)
+  486  279928 [main] tmacs 3696 mount_info::conv_to_win32_path: conv_to_win32_path (/dev/kmsg)
+  491  280419 [main] tmacs 3696 mount_info::conv_to_win32_path: src_path /dev/kmsg, dst \\.\mailslot\cygwin\dev\kmsg, flags 0x2, rc 0
+  581  281000 [main] tmacs 3696 build_fh_pc: fh 0x61163E8C
+  429  281429 [main] tmacs 3696 seterrno_from_win_error: /netrel/src/cygwin-1.5.20-1/winsup/cygwin/fhandler_mailslot.cc:109 windows error 2
+  447  281876 [main] tmacs 3696 geterrno_from_win_error: windows error 2 == errno 2
+  481  282357 [main] tmacs 3696 __set_errno: void seterrno_from_win_error(const char*, int, DWORD):310 val 2
+  553  282910 [main] tmacs 3696 try_to_debug: debugger_command ''
+  509  283419 [main] tmacs 3696 sigproc_terminate: entering
+  400  283819 [main] tmacs 3696 sig_send: sendsig 0x2A0, pid 3696, signal -42, its_me 1
+  500  284319 [main] tmacs 3696 sig_send: Not waiting for sigcomplete.  its_me 1 signal -42
+    8  284327 [sig] tmacs 3696 wait_sig: saw __SIGEXIT
+  465  284792 [main] tmacs 3696 sig_send: returning 0x0 from sending signal -42
+  500  285292 [sig] tmacs 3696 wait_sig: signal thread exiting
+  470  285762 [main] tmacs 3696 proc_terminate: nprocs 0
+  973  286735 [main] tmacs 3696 proc_terminate: leaving
+  658  287393 [main] tmacs 3696 __to_clock_t: dwHighDateTime 0, dwLowDateTime 312500
+  558  287951 [main] tmacs 3696 __to_clock_t: total 00000000 0000001F
+  487  288438 [main] tmacs 3696 __to_clock_t: dwHighDateTime 0, dwLowDateTime 156250
+  484  288922 [main] tmacs 3696 __to_clock_t: total 00000000 0000000F
+ 3396  292318 [main] tmacs 3696 pinfo::exit: Calling ExitProcess n 0x8B, exitcode 0x8B00

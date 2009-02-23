@@ -1,0 +1,518 @@
+**********************************************
+Program name: r:\work\sarnat\src\tmacs\tmacs.exe (pid 3604, ppid 1)
+App version:  1005.20, api: 0.156
+DLL version:  1005.20, api: 0.156
+DLL build:    2006-07-01 02:22
+OS version:   Windows NT-5.2
+Heap size:    402653184
+Date/Time:    2006-07-13 11:28:48
+**********************************************
+  487    4250 [main] tmacs 3604 set_myself: myself->dwProcessId 3604
+  485    4735 [main] tmacs 3604 time: 1152804528 = time (0)
+ 1132    5867 [main] tmacs 3604 environ_init: GetEnvironmentStrings returned 0x436398 - "=C:=C:\cygwin\bin"
+  394    6261 [main] tmacs 3604 environ_init: 0x770238: !C:=C:\cygwin\bin
+  481    6742 [main] tmacs 3604 environ_init: 0x770250: ALLUSERSPROFILE=C:\Documents and Settings\All Users
+  486    7228 [main] tmacs 3604 environ_init: 0x770288: APPDATA=C:\Documents and Settings\sarnat\Application Data
+  487    7715 [main] tmacs 3604 environ_init: 0x7702C8: CLIENTNAME=ginrin
+  538    8253 [main] tmacs 3604 environ_init: 0x7702E0: CLUSTERLOG=C:\WINDOWS\Cluster\cluster.log
+  439    8692 [main] tmacs 3604 environ_init: 0x770310: COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  483    9175 [main] tmacs 3604 environ_init: 0x770350: COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  487    9662 [main] tmacs 3604 environ_init: 0x770390: COMMONPROGRAMW6432=C:\Program Files\Common Files
+  -60    9602 [sig] tmacs 3604 wait_sig: entering ReadFile loop, my_readsig 0x0, my_sendsig 0x0
+ 1044   10646 [main] tmacs 3604 environ_init: 0x7703C8: COMPUTERNAME=WIZARD
+  475   11121 [main] tmacs 3604 environ_init: 0x7703E0: COMSPEC=C:\WINDOWS\system32\cmd.exe
+  486   11607 [main] tmacs 3604 environ_init: 0x770408: CVSROOT=:pserver:sarnat@vcs:/src/MASTER
+  485   12092 [main] tmacs 3604 environ_init: 0x770438: CVS_RSH=/bin/ssh
+  486   12578 [main] tmacs 3604 environ_init: 0x770450: EDITOR=/cygdrive/c/opt/opt/emacs-20.3.1/bin/emacs
+  486   13064 [main] tmacs 3604 environ_init: 0x770488: FP_NO_HOST_CHECK=NO
+  497   13561 [main] tmacs 3604 getwinenv: can't set native for HOME= since no environ yet
+  483   14044 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\home\sarnat, no-keep-rel, no-add-slash)
+  426   14470 [main] tmacs 3604 normalize_win32_path: C:\cygwin\home\sarnat = normalize_win32_path (C:\cygwin\home\sarnat)
+  490   14960 [main] tmacs 3604 mount_info::conv_to_posix_path: /home/sarnat = conv_to_posix_path (C:\cygwin\home\sarnat)
+  621   15581 [main] tmacs 3604 win_env::add_cache: posix /home/sarnat
+  350   15931 [main] tmacs 3604 win_env::add_cache: native HOME=C:\cygwin\home\sarnat
+  478   16409 [main] tmacs 3604 posify: env var converted to HOME=/home/sarnat
+  546   16955 [main] tmacs 3604 environ_init: 0x7704C0: HOME=/home/sarnat
+  489   17444 [main] tmacs 3604 environ_init: 0x7704A0: HOMEDRIVE=C:
+  485   17929 [main] tmacs 3604 environ_init: 0x770608: HOMEPATH=\Documents and Settings\sarnat
+  486   18415 [main] tmacs 3604 environ_init: 0x770638: HOSTNAME=wizard
+  487   18902 [main] tmacs 3604 environ_init: 0x770650: INFOPATH=/usr/local/info:/usr/share/info:/usr/info:
+  486   19388 [main] tmacs 3604 environ_init: 0x770688: LOGONSERVER=\\CORPNYWP1
+  486   19874 [main] tmacs 3604 environ_init: 0x7706A8: MAKE_MODE=unix
+  487   20361 [main] tmacs 3604 environ_init: 0x7706C0: MANPATH=/usr/local/man:/usr/share/man:/usr/man::/usr/ssl/man:/usr/share/qt3/doc/man:/usr/X11R6/man
+  487   20848 [main] tmacs 3604 environ_init: 0x770728: NUMBER_OF_PROCESSORS=8
+  486   21334 [main] tmacs 3604 environ_init: 0x770748: OLDPWD=/work/sarnat/src
+  487   21821 [main] tmacs 3604 environ_init: 0x770768: OS=Windows_NT
+  487   22308 [main] tmacs 3604 getwinenv: can't set native for PATH= since no environ yet
+  434   22742 [main] tmacs 3604 normalize_posix_path: src .
+  481   23223 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (r:\work\sarnat\src\tmacs, no-keep-rel, no-add-slash)
+  549   23772 [main] tmacs 3604 normalize_win32_path: r:\work\sarnat\src\tmacs = normalize_win32_path (r:\work\sarnat\src\tmacs)
+  428   24200 [main] tmacs 3604 mount_info::conv_to_posix_path: /frame/work/sarnat/src/tmacs = conv_to_posix_path (r:\work\sarnat\src\tmacs)
+  486   24686 [main] tmacs 3604 cwdstuff::get: posix /frame/work/sarnat/src/tmacs
+  483   25169 [main] tmacs 3604 cwdstuff::get: (/frame/work/sarnat/src/tmacs) = cwdstuff::get (0x22C890, 260, 1, 0), errno 0
+  484   25653 [main] tmacs 3604 normalize_posix_path: /frame/work/sarnat/src/tmacs/ = normalize_posix_path (.)
+  485   26138 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs)
+  506   26644 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  468   27112 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs, dst r:\work\sarnat\src\tmacs, flags 0xA, rc 0
+ 1018   28130 [main] tmacs 3604 symlink_info::check: not a symlink
+  444   28574 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs, 0x22C550) (0xA)
+ 1226   29800 [main] tmacs 3604 set_privilege: 1 = set_privilege ((token 2A0) SeChangeNotifyPrivilege, 1)
+ 1474   31274 [main] tmacs 3604 path_conv::check: this->path(r:\work\sarnat\src\tmacs), has_acls(0)
+  529   31803 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\usr\local\bin, keep-rel, no-add-slash)
+  418   32221 [main] tmacs 3604 normalize_win32_path: C:\cygwin\usr\local\bin = normalize_win32_path (C:\cygwin\usr\local\bin)
+  487   32708 [main] tmacs 3604 mount_info::conv_to_posix_path: /usr/local/bin = conv_to_posix_path (C:\cygwin\usr\local\bin)
+  484   33192 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\bin, keep-rel, no-add-slash)
+  486   33678 [main] tmacs 3604 normalize_win32_path: C:\cygwin\bin = normalize_win32_path (C:\cygwin\bin)
+  487   34165 [main] tmacs 3604 mount_info::conv_to_posix_path: /usr/bin = conv_to_posix_path (C:\cygwin\bin)
+  487   34652 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\bin, keep-rel, no-add-slash)
+  485   35137 [main] tmacs 3604 normalize_win32_path: C:\cygwin\bin = normalize_win32_path (C:\cygwin\bin)
+  488   35625 [main] tmacs 3604 mount_info::conv_to_posix_path: /usr/bin = conv_to_posix_path (C:\cygwin\bin)
+  486   36111 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\usr\X11R6\bin, keep-rel, no-add-slash)
+  486   36597 [main] tmacs 3604 normalize_win32_path: C:\cygwin\usr\X11R6\bin = normalize_win32_path (C:\cygwin\usr\X11R6\bin)
+  487   37084 [main] tmacs 3604 mount_info::conv_to_posix_path: /usr/X11R6/bin = conv_to_posix_path (C:\cygwin\usr\X11R6\bin)
+  486   37570 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS\system32, keep-rel, no-add-slash)
+  486   38056 [main] tmacs 3604 normalize_win32_path: c:\WINDOWS\system32 = normalize_win32_path (c:\WINDOWS\system32)
+  488   38544 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS/system32 = conv_to_posix_path (c:\WINDOWS\system32)
+  485   39029 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS, keep-rel, no-add-slash)
+  487   39516 [main] tmacs 3604 normalize_win32_path: c:\WINDOWS = normalize_win32_path (c:\WINDOWS)
+  487   40003 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS = conv_to_posix_path (c:\WINDOWS)
+  485   40488 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (c:\WINDOWS\System32\Wbem, keep-rel, no-add-slash)
+ 1459   41947 [main] tmacs 3604 normalize_win32_path: c:\WINDOWS\System32\Wbem = normalize_win32_path (c:\WINDOWS\System32\Wbem)
+  487   42434 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/WINDOWS/System32/Wbem = conv_to_posix_path (c:\WINDOWS\System32\Wbem)
+  487   42921 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\, keep-rel, add-slash)
+  485   43406 [main] tmacs 3604 normalize_win32_path: c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\ = normalize_win32_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\)
+  488   43894 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/ = conv_to_posix_path (c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\)
+  485   44379 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\lib\lapack, keep-rel, no-add-slash)
+  486   44865 [main] tmacs 3604 normalize_win32_path: C:\cygwin\lib\lapack = normalize_win32_path (C:\cygwin\lib\lapack)
+  489   45354 [main] tmacs 3604 mount_info::conv_to_posix_path: /usr/lib/lapack = conv_to_posix_path (C:\cygwin\lib\lapack)
+  492   45846 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\cygwin\cygwin\bin, keep-rel, no-add-slash)
+  480   46326 [main] tmacs 3604 normalize_win32_path: C:\cygwin\cygwin\bin = normalize_win32_path (C:\cygwin\cygwin\bin)
+  487   46813 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygwin/bin = conv_to_posix_path (C:\cygwin\cygwin\bin)
+  596   47409 [main] tmacs 3604 win_env::add_cache: posix /usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  379   47788 [main] tmacs 3604 win_env::add_cache: native PATH=C:\cygwin\usr\local\bin;C:\cygwin\bin;C:\cygwin\bin;C:\cygwin\usr\X11R6\bin;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\cygwin\lib\lapack;C:\cygwin\cygwin\bin
+  482   48270 [main] tmacs 3604 posify: env var converted to PATH=/usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  546   48816 [main] tmacs 3604 environ_init: 0x770878: PATH=/usr/local/bin:/usr/bin:/usr/bin:/usr/X11R6/bin:/cygdrive/c/WINDOWS/system32:/cygdrive/c/WINDOWS:/cygdrive/c/WINDOWS/System32/Wbem:/cygdrive/c/Program Files (x86)/Microsoft SQL Server/90/Tools/binn/:/usr/lib/lapack:/cygwin/bin
+  488   49304 [main] tmacs 3604 environ_init: 0x770780: PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
+  486   49790 [main] tmacs 3604 environ_init: 0x7707C0: PKG_CONFIG_PATH=/usr/X11R6/lib/pkgconfig
+  487   50277 [main] tmacs 3604 environ_init: 0x7707F0: PRINTER=
+  486   50763 [main] tmacs 3604 environ_init: 0x770800: PROCESSOR_ARCHITECTURE=x86
+  973   51736 [main] tmacs 3604 environ_init: 0x770820: PROCESSOR_ARCHITEW6432=AMD64
+  487   52223 [main] tmacs 3604 environ_init: 0x770DA0: PROCESSOR_IDENTIFIER=EM64T Family 15 Model 4 Stepping 8, GenuineIntel
+  485   52708 [main] tmacs 3604 environ_init: 0x770848: PROCESSOR_LEVEL=15
+  487   53195 [main] tmacs 3604 environ_init: 0x770DF0: PROCESSOR_REVISION=0408
+  486   53681 [main] tmacs 3604 environ_init: 0x770E10: PROGRAMFILES(X86)=C:\Program Files (x86)
+  486   54167 [main] tmacs 3604 environ_init: 0x770E40: PROGRAMFILES=C:\Program Files (x86)
+  488   54655 [main] tmacs 3604 environ_init: 0x770E68: PROGRAMW6432=C:\Program Files
+  493   55148 [main] tmacs 3604 environ_init: 0x770860: PROMPT=$P$G
+  482   55630 [main] tmacs 3604 environ_init: 0x770E90: PS1=: wizard; 
+  483   56113 [main] tmacs 3604 environ_init: 0x770EA8: PWD=/work/sarnat/src/tmacs
+  487   56600 [main] tmacs 3604 environ_init: 0x770EC8: QMAKESPEC=/usr/lib/qt3/mkspecs/cygwin-g++
+  486   57086 [main] tmacs 3604 environ_init: 0x770EF8: QTDIR=/usr/lib/qt3
+  487   57573 [main] tmacs 3604 environ_init: 0x770F10: SESSIONNAME=RDP-Tcp#2
+  487   58060 [main] tmacs 3604 environ_init: 0x770F30: SHLVL=1
+  485   58545 [main] tmacs 3604 environ_init: 0x770F40: SYSTEMDRIVE=C:
+  487   59032 [main] tmacs 3604 environ_init: 0x770F58: SYSTEMROOT=C:\WINDOWS
+  489   59521 [main] tmacs 3604 getwinenv: can't set native for TEMP= since no environ yet
+  489   60010 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2, no-keep-rel, no-add-slash)
+  422   60432 [main] tmacs 3604 normalize_win32_path: C:\DOCUME~1\sarnat\LOCALS~1\Temp\2 = normalize_win32_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2)
+  487   60919 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2 = conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2)
+  593   61512 [main] tmacs 3604 win_env::add_cache: posix /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  380   61892 [main] tmacs 3604 win_env::add_cache: native TEMP=C:\DOCUME~1\sarnat\LOCALS~1\Temp\2
+  497   62389 [main] tmacs 3604 posify: env var converted to TEMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  538   62927 [main] tmacs 3604 environ_init: 0x770FA8: TEMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  484   63411 [main] tmacs 3604 environ_init: 0x770F78: TERM=cygwin
+  486   63897 [main] tmacs 3604 environ_init: 0x770F88: TEXDOCVIEW_DVI=cygstart %s
+  487   64384 [main] tmacs 3604 environ_init: 0x771118: TEXDOCVIEW_HTML=cygstart %s
+  486   64870 [main] tmacs 3604 environ_init: 0x771138: TEXDOCVIEW_PDF=cygstart %s
+  486   65356 [main] tmacs 3604 environ_init: 0x771158: TEXDOCVIEW_PS=cygstart %s
+  487   65843 [main] tmacs 3604 environ_init: 0x771178: TEXDOCVIEW_TXT=cygstart %s
+  486   66329 [main] tmacs 3604 getwinenv: can't set native for TMP= since no environ yet
+  487   66816 [main] tmacs 3604 mount_info::conv_to_posix_path: conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2, no-keep-rel, no-add-slash)
+  426   67242 [main] tmacs 3604 normalize_win32_path: C:\DOCUME~1\sarnat\LOCALS~1\Temp\2 = normalize_win32_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2)
+  488   67730 [main] tmacs 3604 mount_info::conv_to_posix_path: /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2 = conv_to_posix_path (C:\DOCUME~1\sarnat\LOCALS~1\Temp\2)
+  591   68321 [main] tmacs 3604 win_env::add_cache: posix /cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  381   68702 [main] tmacs 3604 win_env::add_cache: native TMP=C:\DOCUME~1\sarnat\LOCALS~1\Temp\2
+  485   69187 [main] tmacs 3604 posify: env var converted to TMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  545   69732 [main] tmacs 3604 environ_init: 0x7711C8: TMP=/cygdrive/c/DOCUME~1/sarnat/LOCALS~1/Temp/2
+  488   70220 [main] tmacs 3604 environ_init: 0x771198: USER=SarnaT
+  499   70719 [main] tmacs 3604 environ_init: 0x7711A8: USERDNSDOMAIN=CORP.EMC.COM
+  477   71196 [main] tmacs 3604 environ_init: 0x771338: USERDOMAIN=CORP
+  727   71923 [main] tmacs 3604 environ_init: 0x771350: USERNAME=sarnat
+  486   72409 [main] tmacs 3604 environ_init: 0x771368: USERPROFILE=C:\Documents and Settings\sarnat
+  487   72896 [main] tmacs 3604 environ_init: 0x7713A0: VS80COMNTOOLS=C:\MSDEV80\Common7\Tools\
+  486   73382 [main] tmacs 3604 environ_init: 0x7713D0: WINDIR=C:\WINDOWS
+  486   73868 [main] tmacs 3604 environ_init: 0x7713E8: _=/usr/bin/strace
+  453   74321 [main] tmacs 3604 pinfo_init: Set nice to 0
+  461   74782 [main] tmacs 3604 pinfo_init: pid 3604, pgid 3604
+ 1067   75849 [main] tmacs 3604 set_privilege: 0 = set_privilege ((token 2C4) SeRestorePrivilege, 1)
+  927   76776 [main] tmacs 3604 set_privilege: 0 = set_privilege ((token 2C4) SeBackupPrivilege, 1)
+  450   77226 [main] tmacs 3604 set_privilege: 1 = set_privilege ((token 2C4) SeChangeNotifyPrivilege, 1)
+  550   77776 [main] tmacs 3604 dtable::extend: size 32, fds 0x6116370C
+  429   78205 [main] tmacs 3604 normalize_posix_path: src /etc/passwd
+  469   78674 [main] tmacs 3604 normalize_posix_path: /etc/passwd = normalize_posix_path (/etc/passwd)
+  486   79160 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/passwd)
+  497   79657 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  477   80134 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /etc/passwd, dst C:\cygwin\etc\passwd, flags 0xA, rc 0
+  534   80668 [main] tmacs 3604 symlink_info::check: not a symlink
+  438   81106 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\passwd, 0x22C610) (0xA)
+  517   81623 [main] tmacs 3604 set_privilege: 1 = set_privilege ((token 298) SeChangeNotifyPrivilege, 1)
+  605   82228 [main] tmacs 3604 path_conv::check: this->path(C:\cygwin\etc\passwd), has_acls(1)
+  474   82702 [main] tmacs 3604 etc::test_file_change: FindFirstFile succeeded
+  849   83551 [main] tmacs 3604 pwdgrp::load: /etc/passwd curr_lines 12
+  476   84027 [main] tmacs 3604 pwdgrp::load: /etc/passwd load succeeded
+  509   84536 [main] tmacs 3604 normalize_posix_path: src /etc/group
+  460   84996 [main] tmacs 3604 normalize_posix_path: /etc/group = normalize_posix_path (/etc/group)
+  487   85483 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/group)
+  494   85977 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  482   86459 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /etc/group, dst C:\cygwin\etc\group, flags 0xA, rc 0
+  524   86983 [main] tmacs 3604 symlink_info::check: not a symlink
+  447   87430 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\group, 0x22C5E0) (0xA)
+  486   87916 [main] tmacs 3604 path_conv::check: this->path(C:\cygwin\etc\group), has_acls(1)
+  610   88526 [main] tmacs 3604 etc::test_file_change: FindFirstFile succeeded
+  864   89390 [main] tmacs 3604 pwdgrp::load: /etc/group curr_lines 21
+  474   89864 [main] tmacs 3604 pwdgrp::load: /etc/group load succeeded
+  510   90374 [main] tmacs 3604 internal_getlogin: SetTokenInformation(TokenPrimaryGroup), Win32 error 1308
+  464   90838 [main] tmacs 3604 internal_getlogin: SetTokenInformation(TokenPrimaryGroup), Win32 error 1308
+  482   91320 [main] tmacs 3604 cygheap_user::ontherange: what 2, pw 0x771B18
+  489   91809 [main] tmacs 3604 cygheap_user::ontherange: HOME is already in the environment /home/sarnat
+  578   92387 [main] tmacs 3604 wait_for_sigthread: wait_sig_inited 0x3B4
+  406   92793 [main] tmacs 3604 wait_for_sigthread: process/signal handling enabled, state 0x41
+  691   93484 [main] tmacs 3604 build_argv: argv[0] = 'tmacs.exe'
+  512   93996 [main] tmacs 3604 build_argv: argc 1
+  614   94610 [main] tmacs 3604 build_fh_pc: fh 0x61163874
+  414   95024 [main] tmacs 3604 open_shared: name (null), n 0, shared 0x60020000 (wanted 0x60020000), h 0x3B4
+  439   95463 [main] tmacs 3604 _pinfo::set_ctty: old no ctty
+  481   95944 [main] tmacs 3604 _pinfo::set_ctty: attaching ctty /dev/console sid 3604, pid 3604, pgid 3604, tty->pgid 0, tty->sid 3604
+ 1811   97755 [main] tmacs 3604 fhandler_base::set_flags: flags 0x10002, supplied_bin 0x0
+  395   98150 [main] tmacs 3604 fhandler_base::set_flags: O_TEXT/O_BINARY set in flags 0x10000
+  467   98617 [main] tmacs 3604 fhandler_base::set_flags: filemode set to binary
+  614   99231 [main] tmacs 3604 init_cygheap::manage_console_count: fhandler_console::open: console_count 1, amount 1, ctty /dev/console, avoid_freeing_console 0
+  364   99595 [main] tmacs 3604 fhandler_console::open: opened conin$ 0xF, conout$ 0x13
+  523  100118 [main] tmacs 3604 fhandler_console::output_tcsetattr: 0 = tcsetattr (,6002001C) (ENABLE FLAGS 3) (lflag 107 oflag 9)
+17679  117797 [main] tmacs 3604 handle_to_fn: NtQueryObject failed
+  527  118324 [main] tmacs 3604 normalize_posix_path: src some disk file
+  480  118804 [main] tmacs 3604 cwdstuff::get: posix /frame/work/sarnat/src/tmacs
+  486  119290 [main] tmacs 3604 cwdstuff::get: (/frame/work/sarnat/src/tmacs) = cwdstuff::get (0x224500, 260, 1, 0), errno 0
+  486  119776 [main] tmacs 3604 normalize_posix_path: /frame/work/sarnat/src/tmacs/some disk file = normalize_posix_path (some disk file)
+  488  120264 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs/some disk file)
+  487  120751 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  485  121236 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs/some disk file, dst r:\work\sarnat\src\tmacs\some disk file, flags 0xA, rc 0
+ 2430  123666 [main] tmacs 3604 symlink_info::check: GetFileAttributes (r:\work\sarnat\src\tmacs\some disk file) failed
+  490  124156 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+ 2181  126337 [main] tmacs 3604 symlink_info::check: GetFileAttributes (r:\work\sarnat\src\tmacs\some disk file.lnk) failed
+  494  126831 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+  486  127317 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs\some disk file, 0x2241C0) (0xA)
+  486  127803 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/frame/work/sarnat/src/tmacs)
+  488  128291 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  485  128776 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /frame/work/sarnat/src/tmacs, dst r:\work\sarnat\src\tmacs, flags 0xA, rc 0
+ 1689  130465 [main] tmacs 3604 symlink_info::check: not a symlink
+  501  130966 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (r:\work\sarnat\src\tmacs, 0x2241C0) (0xA)
+  488  131454 [main] tmacs 3604 path_conv::check: this->path(r:\work\sarnat\src\tmacs\some disk file), has_acls(0)
+  497  131951 [main] tmacs 3604 build_fh_pc: fh 0x61163A7C
+  480  132431 [main] tmacs 3604 fhandler_base::set_flags: flags 0x2, supplied_bin 0x0
+  574  133005 [main] tmacs 3604 fhandler_base::set_flags: filemode set to binary
+  644  133649 [main] tmacs 3604 fhandler_base::init: created new fhandler_base for handle 0x23C, bin 1
+  582  134231 [main] tmacs 3604 build_fh_pc: fh 0x61163C84
+  384  134615 [main] tmacs 3604 fhandler_base::set_flags: flags 0x10002, supplied_bin 0x0
+  484  135099 [main] tmacs 3604 fhandler_base::set_flags: O_TEXT/O_BINARY set in flags 0x10000
+  486  135585 [main] tmacs 3604 fhandler_base::set_flags: filemode set to binary
+  578  136163 [main] tmacs 3604 init_cygheap::manage_console_count: fhandler_console::open: console_count 2, amount 1, ctty /dev/console, avoid_freeing_console 0
+  400  136563 [main] tmacs 3604 fhandler_console::open: opened conin$ 0xB, conout$ 0x2B
+  523  137086 [main] tmacs 3604 fhandler_console::output_tcsetattr: 0 = tcsetattr (,6002001C) (ENABLE FLAGS 3) (lflag 107 oflag 9)
+  546  137632 [main] tmacs 3604 fhandler_console::need_invisible: invisible_console 0
+  389  138021 [main] tmacs 3604 dll_crt0_1: user_data->main 0x40B300
+  482  138503 [main] tmacs 3604 __set_errno: void dll_crt0_1(void*):949 val 0
+ 2766  141269 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  406  141675 [main] tmacs 3604 sig_send: wakeup 0x288
+  490  142165 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   13  142178 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  974  143152 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  462  143614 [main] tmacs 3604 open: open (/home/sarnat/.termcap, 0x0)
+  485  144099 [main] tmacs 3604 normalize_posix_path: src /home/sarnat/.termcap
+  485  144584 [main] tmacs 3604 normalize_posix_path: /home/sarnat/.termcap = normalize_posix_path (/home/sarnat/.termcap)
+  487  145071 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/home/sarnat/.termcap)
+  488  145559 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  484  146043 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /home/sarnat/.termcap, dst C:\cygwin\home\sarnat\.termcap, flags 0xA, rc 0
+  556  146599 [main] tmacs 3604 symlink_info::check: GetFileAttributes (C:\cygwin\home\sarnat\.termcap) failed
+  422  147021 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+  522  147543 [main] tmacs 3604 symlink_info::check: GetFileAttributes (C:\cygwin\home\sarnat\.termcap.lnk) failed
+  447  147990 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+  485  148475 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (C:\cygwin\home\sarnat\.termcap, 0x22B870) (0xA)
+  743  149218 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/home/sarnat)
+  477  149695 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  484  150179 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /home/sarnat, dst C:\cygwin\home\sarnat, flags 0xA, rc 0
+  524  150703 [main] tmacs 3604 symlink_info::check: not a symlink
+  692  151395 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (C:\cygwin\home\sarnat, 0x22B870) (0xA)
+  487  151882 [main] tmacs 3604 path_conv::check: this->path(C:\cygwin\home\sarnat\.termcap), has_acls(1)
+  489  152371 [main] tmacs 3604 build_fh_pc: fh 0x61163E8C
+  509  152880 [main] tmacs 3604 fhandler_base::open: (C:\cygwin\home\sarnat\.termcap, 0x100000)
+  528  153408 [main] tmacs 3604 seterrno_from_win_error: /netrel/src/cygwin-1.5.20-1/winsup/cygwin/fhandler.cc:668 windows error 2
+  422  153830 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+  484  154314 [main] tmacs 3604 __set_errno: void seterrno_from_win_error(const char*, int, DWORD):310 val 2
+  486  154800 [main] tmacs 3604 fhandler_base::open: C0000034 = NtCreateFile (0x0, 80100000, C:\cygwin\home\sarnat\.termcap, io, NULL, 0, 7, 1, 20, NULL, 0)
+  485  155285 [main] tmacs 3604 fhandler_base::open: 0 = fhandler_base::open (C:\cygwin\home\sarnat\.termcap, 0x100000)
+  487  155772 [main] tmacs 3604 fhandler_base::open_fs: 0 = fhandler_disk_file::open (C:\cygwin\home\sarnat\.termcap, 0x0)
+  488  156260 [main] tmacs 3604 open: -1 = open (/home/sarnat/.termcap, 0x0)
+  487  156747 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  491  157238 [main] tmacs 3604 sig_send: wakeup 0x288
+  491  157729 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   12  157741 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  964  158705 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  473  159178 [main] tmacs 3604 open: open (/etc/termcap, 0x0)
+  487  159665 [main] tmacs 3604 normalize_posix_path: src /etc/termcap
+  485  160150 [main] tmacs 3604 normalize_posix_path: /etc/termcap = normalize_posix_path (/etc/termcap)
+  487  160637 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/etc/termcap)
+  487  161124 [main] tmacs 3604 set_flags: flags: binary (0x2)
+  486  161610 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /etc/termcap, dst C:\cygwin\etc\termcap, flags 0xA, rc 0
+  523  162133 [main] tmacs 3604 symlink_info::check: not a symlink
+  450  162583 [main] tmacs 3604 symlink_info::check: 0 = symlink.check (C:\cygwin\etc\termcap, 0x22B870) (0xA)
+  487  163070 [main] tmacs 3604 path_conv::check: this->path(C:\cygwin\etc\termcap), has_acls(1)
+  488  163558 [main] tmacs 3604 build_fh_pc: fh 0x61163E8C
+  486  164044 [main] tmacs 3604 fhandler_base::open: (C:\cygwin\etc\termcap, 0x100000)
+  609  164653 [main] tmacs 3604 fhandler_base::set_flags: flags 0x100000, supplied_bin 0x10000
+  366  165019 [main] tmacs 3604 fhandler_base::set_flags: filemode set to binary
+  489  165508 [main] tmacs 3604 fhandler_base::open: 0 = NtCreateFile (0x288, 80100000, C:\cygwin\etc\termcap, io, NULL, 0, 7, 1, 20, NULL, 0)
+  481  165989 [main] tmacs 3604 fhandler_base::open: 1 = fhandler_base::open (C:\cygwin\etc\termcap, 0x100000)
+  485  166474 [main] tmacs 3604 fhandler_base::open_fs: 1 = fhandler_disk_file::open (C:\cygwin\etc\termcap, 0x0)
+  487  166961 [main] tmacs 3604 open: 3 = open (/etc/termcap, 0x0)
+  488  167449 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  490  167939 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  168430 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  168441 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  965  169406 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  480  169886 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  479  170365 [main] tmacs 3604 readv: no need to call ready_for_read
+  523  170888 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  451  171339 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  493  171832 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  484  172316 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  172807 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  172818 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  965  173783 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  476  174259 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  483  174742 [main] tmacs 3604 readv: no need to call ready_for_read
+  495  175237 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  478  175715 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  494  176209 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  176694 [main] tmacs 3604 sig_send: wakeup 0x284
+  489  177183 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  177194 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  968  178162 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  178637 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  484  179121 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  179614 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  484  180098 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  488  180586 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  181072 [main] tmacs 3604 sig_send: wakeup 0x284
+  506  181578 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+    8  181586 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  954  182540 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  183015 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  483  183498 [main] tmacs 3604 readv: no need to call ready_for_read
+  494  183992 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  479  184471 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  494  184965 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  185450 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  185941 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  185951 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  967  186918 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  474  187392 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  483  187875 [main] tmacs 3604 readv: no need to call ready_for_read
+  496  188371 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  188851 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  491  189342 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  189827 [main] tmacs 3604 sig_send: wakeup 0x284
+  490  190317 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  190328 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  966  191294 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  476  191770 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  484  192254 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  192747 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  193227 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  493  193720 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  194206 [main] tmacs 3604 sig_send: wakeup 0x284
+  489  194695 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  194706 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+ 1029  195735 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  429  196164 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  468  196632 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  197125 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  492  197617 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  481  198098 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  198584 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  199075 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  199086 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  965  200051 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  474  200525 [main] tmacs 3604 readv: readv (3, 0x22BFA0, 1) blocking, sigcatchers 0
+  484  201009 [main] tmacs 3604 readv: no need to call ready_for_read
+  494  201503 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  201983 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BFA0, 1), errno 2
+  553  202536 [main] tmacs 3604 fhandler_base::lseek: lseek (/etc/termcap, 0, 0)
+  420  202956 [main] tmacs 3604 fhandler_base::lseek: setting file pointer to 0 (high), 0 (low)
+  491  203447 [main] tmacs 3604 lseek64: 0 = lseek (3, 0, 0)
+  482  203929 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  490  204419 [main] tmacs 3604 sig_send: wakeup 0x284
+  492  204911 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  204921 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  972  205893 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  470  206363 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  483  206846 [main] tmacs 3604 readv: no need to call ready_for_read
+  495  207341 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  479  207820 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  493  208313 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  208798 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  209289 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  209299 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  966  210265 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  210740 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  534  211274 [main] tmacs 3604 readv: no need to call ready_for_read
+  448  211722 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  476  212198 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  493  212691 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  213177 [main] tmacs 3604 sig_send: wakeup 0x284
+  504  213681 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+    9  213690 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  954  214644 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  215119 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  484  215603 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  216096 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  479  216575 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  494  217069 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  217555 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  218046 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  218056 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  966  219022 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  219497 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  484  219981 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  220474 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  220954 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  493  221447 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  221932 [main] tmacs 3604 sig_send: wakeup 0x284
+  490  222422 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  222433 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  966  223399 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  476  223875 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  483  224358 [main] tmacs 3604 readv: no need to call ready_for_read
+  494  224852 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  225332 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  492  225824 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  226310 [main] tmacs 3604 sig_send: wakeup 0x284
+  557  226867 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  226878 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  910  227788 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  464  228252 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  484  228736 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  229229 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  489  229718 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  485  230203 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  230688 [main] tmacs 3604 sig_send: wakeup 0x284
+  491  231179 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  231189 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  966  232155 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  476  232631 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  482  233113 [main] tmacs 3604 readv: no need to call ready_for_read
+  495  233608 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  234088 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  492  234580 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  235065 [main] tmacs 3604 sig_send: wakeup 0x284
+  490  235555 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  235566 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  967  236533 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  476  237009 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  483  237492 [main] tmacs 3604 readv: no need to call ready_for_read
+  493  237985 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  481  238466 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  491  238957 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  485  239442 [main] tmacs 3604 sig_send: wakeup 0x284
+  492  239934 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   10  239944 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  967  240911 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  475  241386 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  484  241870 [main] tmacs 3604 readv: no need to call ready_for_read
+  578  242448 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  404  242852 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  483  243335 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  486  243821 [main] tmacs 3604 sig_send: wakeup 0x284
+  489  244310 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x284
+   11  244321 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x284
+  967  245288 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  492  245780 [main] tmacs 3604 readv: readv (3, 0x22BA10, 1) blocking, sigcatchers 0
+  469  246249 [main] tmacs 3604 readv: no need to call ready_for_read
+  492  246741 [main] tmacs 3604 fhandler_base::read: returning 1024, binary mode
+  480  247221 [main] tmacs 3604 readv: 1024 = readv (3, 0x22BA10, 1), errno 2
+  708  247929 [main] tmacs 3604 close: close (3)
+  508  248437 [main] tmacs 3604 fhandler_base::close: closing '/etc/termcap' handle 0x288
+  514  248951 [main] tmacs 3604 close: 0 = close (3)
+  886  249837 [main] tmacs 3604 fhandler_console::tcgetattr: 0 = tcgetattr (0x22C5A0) enable flags 0x1F, t->lflag 0x107, t->iflag 0x502
+  546  250383 [main] tmacs 3604 tcgetattr: iflag 502, oflag 9, cflag BF, lflag 107, VMIN 1, VTIME 0
+ 1375  251758 [main] tmacs 3604 fhandler_console::tcgetattr: 0 = tcgetattr (0x4208F0) enable flags 0x1F, t->lflag 0x107, t->iflag 0x502
+  571  252329 [main] tmacs 3604 tcgetattr: iflag 502, oflag 9, cflag BF, lflag 107, VMIN 1, VTIME 0
+  507  252836 [main] tmacs 3604 fhandler_console::output_tcsetattr: 0 = tcsetattr (,420840) (ENABLE FLAGS 3) (lflag 0 oflag 8)
+  508  253344 [main] tmacs 3604 fhandler_console::input_tcsetattr: 0 = tcsetattr (,420840) enable flags 0x18, c_lflag 0x0 iflag 0x0
+  687  254031 [main] tmacs 3604 __set_errno: int tcsetattr(int, int, const termios*):161 val 2
+  487  254518 [main] tmacs 3604 tcsetattr: iflag 0x0, oflag 0x8, cflag 0xBF, lflag 0x0, VMIN 1, VTIME 0
+  485  255003 [main] tmacs 3604 tcsetattr: 0 = tcsetattr (0, 1, 420840)
+  691  255694 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  291  255985 [main] tmacs 3604 sig_send: wakeup 0x288
+  489  256474 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   11  256485 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  964  257449 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  605  258054 [main] tmacs 3604 void: 0x0 = signal (18, 0x0)
+  373  258427 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  475  258902 [main] tmacs 3604 sig_send: wakeup 0x288
+  489  259391 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   11  259402 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  966  260368 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  474  260842 [main] tmacs 3604 void: 0x0 = signal (19, 0x40F8F9)
+  498  261340 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  480  261820 [main] tmacs 3604 sig_send: wakeup 0x288
+  489  262309 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   10  262319 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  967  263286 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  559  263845 [main] tmacs 3604 fhandler_console::write: 419E27, 1
+  402  264247 [main] tmacs 3604 fhandler_console::write: at 49(1) state is 0
+  597  264844 [main] tmacs 3604 fhandler_console::write: 1 = write_console (,..1)
+ 1907  266751 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -34, its_me 1
+  421  267172 [main] tmacs 3604 sig_send: wakeup 0x288
+  489  267661 [main] tmacs 3604 sig_send: Waiting for pack.wakeup 0x288
+   10  267671 [sig] tmacs 3604 wait_sig: signalling pack.wakeup 0x288
+  966  268637 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -34
+  536  269173 [main] tmacs 3604 fhandler_console::write: 419E29, 1
+  423  269596 [main] tmacs 3604 fhandler_console::write: at 50(2) state is 0
+  537  270133 [main] tmacs 3604 fhandler_console::write: 1 = write_console (,..1)
+--- Process 3604, exception C0000005 at 3F5B455C
+  678  270811 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler exc 0xC0000005 at 0x3F5B455C sp 0x22CC10
+  489  271300 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler sig 11 at 0x3F5B455C
+  484  271784 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler calling 0x0
+  489  272273 [main] tmacs 3604 _cygtls::handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+  972  273245 [main] tmacs 3604 try_to_debug: debugger_command ''
+ 2921  276166 [main] tmacs 3604 open_stackdumpfile: Dumping stack trace to tmacs.exe.stackdump
+--- Process 3604, exception C0000005 at 61016545
+ 3741  279907 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler exc 0xC0000005 at 0x61016545 sp 0x22C6DC
+  398  280305 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler sig 11 at 0x61016545
+  479  280784 [main] tmacs 3604 _cygtls::handle_exceptions: In cygwin_except_handler calling 0x0
+  488  281272 [main] tmacs 3604 _cygtls::handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+ 1460  282732 [main] tmacs 3604 _cygtls::handle_exceptions: Error while dumping state (probably corrupted stack)
+ 1506  284238 [main] tmacs 3604 inside_kernel: pc 0x61016545, h 0x61000000, inside_kernel 0
+  462  284700 [main] tmacs 3604 normalize_posix_path: src /dev/kmsg
+  462  285162 [main] tmacs 3604 normalize_posix_path: /dev/kmsg = normalize_posix_path (/dev/kmsg)
+  488  285650 [main] tmacs 3604 mount_info::conv_to_win32_path: conv_to_win32_path (/dev/kmsg)
+  492  286142 [main] tmacs 3604 mount_info::conv_to_win32_path: src_path /dev/kmsg, dst \\.\mailslot\cygwin\dev\kmsg, flags 0x2, rc 0
+  488  286630 [main] tmacs 3604 build_fh_pc: fh 0x61163E8C
+  516  287146 [main] tmacs 3604 seterrno_from_win_error: /netrel/src/cygwin-1.5.20-1/winsup/cygwin/fhandler_mailslot.cc:109 windows error 2
+  448  287594 [main] tmacs 3604 geterrno_from_win_error: windows error 2 == errno 2
+  487  288081 [main] tmacs 3604 __set_errno: void seterrno_from_win_error(const char*, int, DWORD):310 val 2
+  538  288619 [main] tmacs 3604 try_to_debug: debugger_command ''
+  501  289120 [main] tmacs 3604 sigproc_terminate: entering
+  673  289793 [main] tmacs 3604 sig_send: sendsig 0x29C, pid 3604, signal -42, its_me 1
+  496  290289 [main] tmacs 3604 sig_send: Not waiting for sigcomplete.  its_me 1 signal -42
+    6  290295 [sig] tmacs 3604 wait_sig: saw __SIGEXIT
+  462  290757 [main] tmacs 3604 sig_send: returning 0x0 from sending signal -42
+  969  291726 [sig] tmacs 3604 wait_sig: signal thread exiting
+    2  291728 [main] tmacs 3604 proc_terminate: nprocs 0
+  973  292701 [main] tmacs 3604 proc_terminate: leaving
+  677  293378 [main] tmacs 3604 __to_clock_t: dwHighDateTime 0, dwLowDateTime 312500
+  543  293921 [main] tmacs 3604 __to_clock_t: total 00000000 0000001F
+  482  294403 [main] tmacs 3604 __to_clock_t: dwHighDateTime 0, dwLowDateTime 468750
+  486  294889 [main] tmacs 3604 __to_clock_t: total 00000000 0000002E
+ 3384  298273 [main] tmacs 3604 pinfo::exit: Calling ExitProcess n 0x8B, exitcode 0x8B00

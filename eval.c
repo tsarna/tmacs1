@@ -491,6 +491,7 @@ char *value;	/* value to set to */
 	return(status);
 }
 
+#if 0
 /*	atoi:	ascii string to integer......This is too
 		inconsistant to use the system's	*/
 
@@ -527,6 +528,7 @@ char *st;
 
 	return(result * sign);
 }
+#endif
 
 /*	itoa:	integer to ascii string.......... This is too
 		inconsistant to use the system's	*/
