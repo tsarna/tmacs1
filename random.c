@@ -38,7 +38,7 @@ showcpos(f, n)
         register int	numlines;	/* # of lines in file */
         register long   predchars;	/* # chars preceding point */
         register int	predlines;	/* # lines preceding point */
-        register int    curchar;	/* character under cursor */
+        register int    curchar = '\n';	/* character under cursor */
         int ratio;
         int col;
 	int savepos;			/* temp save for current offset */
@@ -476,19 +476,21 @@ int mode;
 	/* check for a brace */
 	tptr = curwp->w_doto; /*  - 1;*/
 	bracef = 0;
-	if ((mode & (MDCMOD|MDPYMOD)) && (cptr[tptr-1] == '{')) {
-		bracef |= 1;
-	}
-	if ((mode & (MDSTX|MDPYMOD)) && (cptr[tptr-1] == ':')) {
-		bracef |= 1;
-		if (mode & MDSTX) {
-			nnl++;
+        if (tptr) {
+        	if ((mode & (MDCMOD|MDPYMOD)) && (cptr[tptr-1] == '{')) {
+        		bracef |= 1;
+		}
+		if ((mode & (MDSTX|MDPYMOD)) && (cptr[tptr-1] == ':')) {
+			bracef |= 1;
+			if (mode & MDSTX) {
+				nnl++;
+			}
 		}
 	}
 
 	/* save the indent of the previous line */
 	i = 0;
-	while ((i <= tptr) && (cptr[i] == ' ' || cptr[i] == '\t')
+	while ((i < tptr) && (cptr[i] == ' ' || cptr[i] == '\t')
 		&& (i < NSTRING - 1)) {
 		ichar[i] = cptr[i];
 		++i;

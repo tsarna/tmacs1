@@ -72,7 +72,6 @@ KEYTAB  keytab[NBINDS] = {
 	{CTLX|'2',		splitwind},
 	{CTLX|'A',		setvar},
 	{CTLX|'B',		usebuffer},
-	{CTLX|'C',		spawncli},
 #if	BSD
 	{CTLX|'D',		bktoshell},
 #endif

@@ -4,3 +4,4 @@
 1.0.3	fixed hanging indent on blank line, some warns, removed tipc
 1.0.4	added rsn, removed hp110
 1.0.5	cygwin support, removed hp150 and wangpc
+1.0.6	last hanging indent fix fixed, fixed ^X= at end, removed mac&dg10

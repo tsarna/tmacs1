@@ -36,7 +36,7 @@
 */
 
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0.5"
+#define	VERSION		"1.0.6"
 
 /*	Machine/OS definitions			*/
 
@@ -49,7 +49,6 @@
 #define TERMIOS 1                       /* termios not sgtty            */
 #define VMS     0                       /* VAX/VMS                      */
 #define CPM     0                       /* CP/M-86                      */
-#define	FINDER	0			/* Macintosh OS			*/
 
 /*	Compiler definitions			*/
 #define	UNIX	1	/* a random UNIX compiler */
@@ -72,8 +71,6 @@
 #define RAINBOW 0                       /* Use Rainbow fast video.      */
 #define TERMCAP 1                       /* Use TERMCAP                  */
 #define	IBMPC	0			/* IBM-PC CGA/MONO/EGA driver	*/
-#define	DG10	0			/* Data General system/10	*/
-#define	MAC	0			/* Macintosh			*/
 #define	ATARI	0			/* Atari 520/1040ST screen	*/
 
 /*	Configuration options	*/

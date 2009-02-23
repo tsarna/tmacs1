@@ -32,16 +32,6 @@ char *pathname[] =
 };
 #endif
 
-#if	FINDER
-{
-	"emacs.rc",
-	"emacs.hlp",
-	"/bin",
-	"/sys/public",
-	""
-};
-#endif
-
 #if	MSDOS
 {
 	"emacs.rc",
