@@ -4,6 +4,8 @@
 	written 1986 by Daniel Lawrence				*/
 
 #include	<stdio.h>
+#include        <string.h>
+#include        <stdlib.h>
 #include	"estruct.h"
 #include	"edef.h"
 #include	"evar.h"

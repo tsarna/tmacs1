@@ -26,7 +26,6 @@
 #undef	EGA
 #endif
 
-/*#define FSE 0*/
 
 /*	Program Identification.....
 
@@ -36,13 +35,8 @@
 	product. Macros can query this via the $progname variable
 */
 
-#ifdef	FSE
-#define	PROGNAME	"FSEmacs"
-#define	VERSION		"3.9"
-#else
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0.2"
-#endif
+#define	VERSION		"1.0.3"
 
 /*	Machine/OS definitions			*/
 
@@ -85,7 +79,6 @@
 #define TERMCAP 1                       /* Use TERMCAP                  */
 #define	IBMPC	0			/* IBM-PC CGA/MONO/EGA driver	*/
 #define	DG10	0			/* Data General system/10	*/
-#define	TIPC	0			/* TI Profesional PC driver	*/
 #define	MAC	0			/* Macintosh			*/
 #define	ATARI	0			/* Atari 520/1040ST screen	*/
 
@@ -101,11 +94,7 @@
 #define	CTRLZ	0	/* add a ^Z at end of files under MSDOS only	*/
 
 #define	REVSTA	1	/* Status line appears in reverse video		*/
-#if FSE
-#define	COLOR	1	/* color commands and windows			*/
-#else
 #define	COLOR	0	/* color commands and windows			*/
-#endif
 
 #define	FILOCK	0	/* file locking under unix BSD 4.2		*/
 #define	ISRCH	1	/* Incremental searches like ITS EMACS		*/
@@ -123,12 +112,7 @@
 
 /*	System dependant library redefinitions, structures and includes	*/
 
-#if	FSE
-#undef	CTAGS
-#define	CTAGS	0
-#endif
-
-#if !AMIGA || FSE
+#if !AMIGA
 #define ifmlreply(a,b,c) mlreply(a,b,c)
 #endif
 
@@ -502,7 +486,7 @@ typedef struct  {
 	short	t_margin;		/* min margin for extended lines*/
 	short	t_scrsiz;		/* size of scroll region "	*/
 	int	t_pause;		/* # times thru update to pause */
-        int     (*t_open)(void);            /* Open terminal at the start.  */
+        int     (*t_open)();            /* Open terminal at the start.  */
         int     (*t_close)();           /* Close terminal at end.       */
 	int	(*t_kopen)();		/* Open keyboard		*/
 	int	(*t_kclose)();		/* close keyboard		*/

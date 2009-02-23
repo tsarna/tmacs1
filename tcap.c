@@ -5,8 +5,10 @@
 #define	termdef	1			/* don't define "term" external */
 
 #include <stdio.h>
-#include	"estruct.h"
-#include        "edef.h"
+#include <stdlib.h>
+
+#include "estruct.h"
+#include "edef.h"
 
 #if TERMCAP
 
@@ -39,7 +41,7 @@ extern	int	tcapfcol();
 extern	int	tcapbcol();
 #endif
 
-#define TCAPSLEN 1024
+#define TCAPSLEN 315
 char tcapbuf[TCAPSLEN];
 char *UP, PC, *CM, *CE, *CL, *SO, *SE, *TI, *TE;
 
@@ -70,15 +72,35 @@ TERM term = {
 #endif
 };
 
-int
-tcapopen(void)
+
+#include <signal.h>
+
+
+#ifdef SIGWINCH
+#include <sys/ioctl.h>
+
+int gotsigwinch = 0;
+
+void
+do_sigwinch(int x)
+{
+    gotsigwinch = 1;
+}
+#endif
+
+
+tcapopen()
 
 {
         char *getenv();
         char *t, *p, *tgetstr();
-        char tcbuf[2048];
+        char tcbuf[1024];
         char *tv_stype;
         char err_str[72];
+
+#ifdef SIGWINCH
+        struct winsize ws;
+#endif
 
         if ((tv_stype = getenv("TERM")) == NULL)
         {
@@ -94,17 +116,24 @@ tcapopen(void)
         }
 
  
-       if ((term.t_nrow=(short)tgetnum("li")-1) == -1){
+        if ((term.t_nrow=(short)tgetnum("li")-1) == -1){
                puts("termcap entry incomplete (lines)");
                exit(1);
-       }
-	term.t_mrow =  term.t_nrow;
+        }
+        term.t_mrow = 512;
 
-       if ((term.t_ncol=(short)tgetnum("co")) == -1){
+        if ((term.t_ncol=(short)tgetnum("co")) == -1){
                puts("Termcap entry incomplete (columns)");
                exit(1);
-       }
-	term.t_mcol = term.t_ncol;
+        }
+	term.t_mcol = 256;
+
+#ifdef SIGWINCH
+        if (ioctl(0, TIOCGWINSZ, &ws) == 0) {
+                term.t_nrow = ws.ws_row - 1;
+                term.t_ncol = ws.ws_col;
+        }
+#endif
 
         p = tcapbuf;
         t = tgetstr("pc", &p);
@@ -137,11 +166,9 @@ tcapopen(void)
                 exit(1);
         }
         ttopen();
-        write(2, "1", 1);
 	putpad(TI);
-        write(2, "22", 2);
 
-        return 0;
+        signal(SIGWINCH, do_sigwinch);
 }
 
 

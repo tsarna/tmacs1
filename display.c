@@ -7,14 +7,12 @@
  */
 
 #include        <stdio.h>
+#include        <stdlib.h>
 #include	"estruct.h"
 #include        "edef.h"
 
 
 
-#if FSE
-extern int sysop;
-#endif
 
 
 
@@ -52,28 +50,21 @@ vtinit()
     register int i;
     register VIDEO *vp;
 
-write(2, "0", 1);
     TTopen();		/* open the screen */
-write(2, "333", 3);
     TTkopen();		/* open the keyboard */
-write(2, "4444", 4);
     TTrev(FALSE);
-write(2, "55555", 5);
     vscreen = (VIDEO **) malloc(term.t_mrow*sizeof(VIDEO *));
-write(2, "666666", 6);
 
     if (vscreen == NULL)
         exit(1);
 
 #if	MEMMAP == 0
-write(2, "7777777", 6);
     pscreen = (VIDEO **) malloc(term.t_mrow*sizeof(VIDEO *));
 
     if (pscreen == NULL)
         exit(1);
 #endif
 
-write(2, "88888888", 8);
     for (i = 0; i < term.t_mrow; ++i)
         {
         vp = (VIDEO *) malloc(sizeof(VIDEO)+term.t_mcol);
@@ -97,7 +88,6 @@ write(2, "88888888", 8);
         pscreen[i] = vp;
 #endif
         }
-write(2, "999999999", 9);
 }
 
 /*
@@ -798,12 +788,6 @@ modeline(wp)
 
 	firstm = TRUE;
 
-#if FSE
-	if (sysop) {
-		firstm = FALSE;
-		strcat(tline, "SYSOP");
-	}
-#endif
 
 	for (i = 0; i < NUMMODES; i++)	/* add in the mode flags */
 		if (wp->w_bufp->b_mode & (1 << i) & ~MDVIEW) {
@@ -833,11 +817,6 @@ modeline(wp)
     n += 8;
 #endif
 
-#if FSE
-    vtputc(lchar);
-    vtputc(lchar);
-    n += 2;
-#endif
     vtputc(lchar);
     vtputc(lchar);
     vtputc(' ');
@@ -855,31 +834,6 @@ modeline(wp)
     vtputc(lchar);
     n += 3;
 
-#if FSE
-    vtputc(lchar);
-    vtputc(lchar);
-    n += 2;
-
-    cp = " Esc-? help ";
-    while ((c = *cp++) != 0) {
-        vtputc(c);
-        ++n;
-    }
-
-    vtputc(lchar);
-    vtputc(lchar);
-    vtputc(lchar);
-    vtputc(lchar);
-    n += 4;
-
-    cp = " ^Z save+exit ";
-    while ((c = *cp++) != 0) {
-        vtputc(c);
-        ++n;
-    }
-
-
-#else
     if (bp->b_fname[0] != 0)            /* File name. */
         {
 	vtputc(' ');
@@ -903,7 +857,6 @@ modeline(wp)
         vtputc(' ');
         ++n;
         }
-#endif
 
     while (n < term.t_ncol)             /* Pad to full width. */
         {

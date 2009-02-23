@@ -1,4 +1,4 @@
 fix CMODE newline on line of blanks
-fix wrapword for STX to preserve leading spaces
-fix fill-paragraph
-fix mlwrite
+fix mlwrite (what was this??)
+add rsin
+

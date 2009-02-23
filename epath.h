@@ -9,17 +9,9 @@ char *pathname[] =
 
 #if	AMIGA
 {
-#if FSE
-	".fsemacsrc",
-	"fsemacs.hlp",
-#else
 	".emacsrc",
 	"emacs.hlp",
-#endif
 	"",
-#if FSE
-	"BBX:",
-#endif
 	"sys:c/",
 	"sys:t/",
 	"sys:s/",

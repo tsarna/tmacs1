@@ -3,8 +3,17 @@
 		5/9/86						*/
 
 #include	<stdio.h>
+#include        <signal.h>
+#include        <string.h>
 #include	"estruct.h"
 #include	"edef.h"
+
+#ifdef SIGWINCH
+#include        <sys/ioctl.h>
+
+extern int gotsigwinch;
+#endif
+
 
 /*
  * Ask a yes or no question in the message line. Return either TRUE, FALSE, or
@@ -370,8 +379,23 @@ getcmd()
 {
 	int c;		/* fetched keystroke */
 
+#ifdef SIGWINCH
+        struct winsize ws;
+#endif
+
 	/* get initial character */
 	c = get1key();
+
+#ifdef SIGWINCH
+        if (gotsigwinch) {
+        	gotsigwinch = 0;
+     
+	        if (ioctl(0, TIOCGWINSZ, &ws) == 0) {
+                	newsize(TRUE, ws.ws_row);
+                	newwidth(TRUE, ws.ws_col);
+                }
+        }
+#endif
 
 	/* process META prefix */
 	if (c == metac) {

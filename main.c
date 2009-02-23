@@ -1,9 +1,3 @@
-#if FSE
-#include "bbxbase.h"
-#include "bbxshell.h"
-#include "bbxdefines.h"
-#endif
-
 /*
  *	MicroEMACS 3.9
  * 			written by Dave G. Conroy.
@@ -780,6 +774,7 @@
  */
 
 #include        <stdio.h>
+#include        <stdlib.h>
 
 /* for MSDOS, increase the default stack space */
 
@@ -819,15 +814,9 @@ unsigned _stklen = 32768;
 #define GOOD    0
 #endif
 
-#if FSE
-MainLoop(argc, argv)
-int argc;
-char *argv[];
-#else
 main(argc, argv)
 int argc;
 char *argv[];
-#endif
 {
         register int    c;		/* command character */
         register int    f;		/* default flag */
@@ -851,10 +840,6 @@ char *argv[];
 #endif
 	char *strncpy();
 	extern *pathname[];		/* startup file path/name array */
-#if FSE
-	extern int sysop;
-#endif
-
 
 	/* initialize the editor */
         vtinit();		/* Display */
@@ -872,29 +857,13 @@ char *argv[];
 
 	/* Parse the command line */
 
-#if FSE
-	restflag = !sysop;
-
-	/* BBX FSE startup code get filename from arg 2, max size from arg 3 */
-	{
-		/* set up a buffer for this file */
-                makename(bname, "text");
-		unqname(bname);
-
-		/* set this to inactive */
-		bp = bfind(bname, TRUE, 0);
-		strcpy(bp->b_fname, argv[2]);
-		bp->b_active = FALSE;
-		if (firstfile) {
-			firstbp = bp;
-			firstfile = FALSE;
-		}
-	}
-#else
 	for (carg = 1; carg < argc; ++carg) {
 
 		/* Process Switches */
-		if (argv[carg][0] == '-') {
+                if (argv[carg][0] == '+') {
+			gotoflag = TRUE;
+			gline = atoi(&argv[carg][1]);
+                } else if (argv[carg][0] == '-') {
 			switch (argv[carg][1]) {
 				case 'e':	/* -e for Edit file */
 				case 'E':
@@ -967,8 +936,6 @@ char *argv[];
 #endif
 		}
 	}
-
-#endif
 
 	/* if invoked with no other startup files,
 	   run the system startup file here */
@@ -1229,11 +1196,8 @@ execute(c, f, n)
                 return (status);
         }
 	TTbeep();
-#if !FSE
 	mlwrite("[Key not bound]");		/* complain		*/
-#else
-	mlwrite("[Key not bound -- try Escape-? for help]");
-#endif
+
         lastflag = 0;                           /* Fake last flags.     */
         return (FALSE);
 }
@@ -1256,7 +1220,7 @@ quickexit(f, n)
         	&& (bp->b_flag&BFINVS) == 0) {	/* Real.                */
 			curbp = bp;		/* make that buffer cur	*/
 			mlwrite("[Saving %s]",bp->b_fname);
-#if !AMIGA || FSE
+#if !AMIGA
 			mlwrite("\n");
 #endif
                 	if ((status = filesave(f, n)) != TRUE) {

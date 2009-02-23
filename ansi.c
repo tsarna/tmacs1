@@ -48,7 +48,6 @@ extern	int	ansibcol();
 int	cfcolor = -1;		/* current forground color */
 int	cbcolor = -1;		/* current background color */
 
-#if !FSE
 #if	AMIGA
 /* apperently the AMIGA does not follow the ANSI standards as
    regards to colors....maybe because of the default pallette
@@ -56,7 +55,6 @@ int	cbcolor = -1;		/* current background color */
 */
 
 int coltran[8] = {1, 4, 5, 7, 3, 0, 6, 2};	/* color translation table */
-#endif
 #endif
 #endif
 
@@ -101,12 +99,8 @@ int color;	/* color to set */
 		return;
 	ttputc(ESC);
 	ttputc('[');
-#if !FSE
 #if	AMIGA
 	ansiparm(coltran[color]+30);
-#else
-	ansiparm(color+30);
-#endif
 #else
 	ansiparm(color+30);
 #endif
@@ -123,12 +117,8 @@ int color;	/* color to set */
 		return;
 	ttputc(ESC);
 	ttputc('[');
-#if 	!FSE
 #if	AMIGA
 	ansiparm(coltran[color]+40);
-#else
-	ansiparm(color+40);
-#endif
 #else
 	ansiparm(color+40);
 #endif

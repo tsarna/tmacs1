@@ -49,6 +49,7 @@
  */
 
 #include        <stdio.h>
+#include        <string.h>
 #include	"estruct.h"
 #include        "edef.h"
 

@@ -60,14 +60,9 @@ KEYTAB  keytab[NBINDS] = {
 	{CTLX|CTRL|'X',		swapmark},
 	{CTLX|CTRL|'Z',		shrinkwind},
 	{CTLX|'?',		deskey},
-#if !FSE
 	{CTLX|'!',		spawn},
 	{CTLX|'@',		pipecmd},
 	{CTLX|'#',		filter},
-#else
-	{CTLX|'U',		bbx_upload_insert},
-	{CTLX|'!',		bbx_send_nodemsg},
-#endif
 	{CTLX|'=',		showcpos},
 	{CTLX|'(',		ctlxlp},
 	{CTLX|')',		ctlxrp},
@@ -77,9 +72,7 @@ KEYTAB  keytab[NBINDS] = {
 	{CTLX|'2',		splitwind},
 	{CTLX|'A',		setvar},
 	{CTLX|'B',		usebuffer},
-#if !FSE
 	{CTLX|'C',		spawncli},
-#endif
 #if	BSD
 	{CTLX|'D',		bktoshell},
 #endif

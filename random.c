@@ -9,9 +9,6 @@
 
 
 
-#if FSE
-extern int sysop;
-#endif
 
 
 
@@ -477,21 +474,22 @@ int mode;
 	cptr = &curwp->w_dotp->l_text[0];
 
 	/* check for a brace */
-	tptr = curwp->w_doto - 1;
+	tptr = curwp->w_doto; /*  - 1;*/
 	bracef = 0;
-	if ((mode & (MDCMOD|MDPYMOD)) && (cptr[tptr] == '{')) {
+	if ((mode & (MDCMOD|MDPYMOD)) && (cptr[tptr-1] == '{')) {
 		bracef |= 1;
 	}
-	if ((mode & (MDSTX|MDPYMOD)) && (cptr[tptr] == ':')) {
+	if ((mode & (MDSTX|MDPYMOD)) && (cptr[tptr-1] == ':')) {
 		bracef |= 1;
 		if (mode & MDSTX) {
 			nnl++;
 		}
 	}
 
+	mlwrite("[~~ column is %d]",tptr);
 	/* save the indent of the previous line */
 	i = 0;
-	while ((i < tptr) && (cptr[i] == ' ' || cptr[i] == '\t')
+	while ((i <= tptr) && (cptr[i] == ' ' || cptr[i] == '\t')
 		&& (i < NSTRING - 1)) {
 		ichar[i] = cptr[i];
 		++i;
@@ -822,12 +820,6 @@ int global;	/* true = global flag,	false = current buffer flag */
 		}
 	}
 
-#if FSE
-	if ((!sysop) && (strcmp(cbuf, "VIEW") == 0)) {
-		mlwrite("[That command is RESTRICTED]");
-		return(FALSE);
-	}
-#endif
 
 	/* test it against the modes we know */
 

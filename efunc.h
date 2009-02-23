@@ -199,16 +199,9 @@ extern	int	storeproc();		/* store names procedure */
 extern	int	execproc();		/* execute procedure */
 #endif
 extern	int	nullproc();		/* does nothing... */
-#if FSE
-extern	int	bbx_ask_proto();	/* ask xfer proto      */
-extern	int	bbx_conference();	/* bbx conference mode */
-extern	int	bbx_send_nodemsg();	/* send node message   */
-extern	int	bbx_upload_insert();	/* upload into text    */
-#else
 #if AMIGA
 extern	int	aboutreq();
 extern	int	askquickexit();
-#endif
 #endif
 #if	CTAGS
 extern	int	backtagword();
@@ -225,31 +218,21 @@ extern	int	tagword();
 
 NBIND	names[] = {
 	{"abort-command",		ctrlg},
-#if 	!FSE
 #if	AMIGA
 	{"about",			aboutreq},
-#endif
 #endif
 	{"add-mode",			setmode},
 	{"add-global-mode",		setgmode},
 #if	APROP
 	{"apropos",			apro},
 #endif
-#if	!FSE
 #if	AMIGA
 	{"ask-quick-exit",		askquickexit},
-#endif
 #endif
 #if	CTAGS
 	{"back-from-tag-word",		backtagword},
 #endif
 	{"backward-character",		backchar},
-#if	FSE
-	{"bbx-ask-protocol",		bbx_ask_proto},
-	{"bbx-conference",		bbx_conference},
-	{"bbx-send-node-message",	bbx_send_nodemsg},
-	{"bbx-upload-insert",		bbx_upload_insert},
-#endif
 	{"begin-macro",			ctlxlp},
 	{"beginning-of-file",		gotobob},
 	{"beginning-of-line",		gotobol},

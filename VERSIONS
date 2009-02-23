@@ -1,0 +1,4 @@
+1.0.0	added STX, pymode
+1.0.1	fixed wordwrap, removed z309
+1.0.2	added +lineno flag, sigwinch, removed FSE 
+1.0.3	fixed hanging indent on blank line, some warns, removed tipc

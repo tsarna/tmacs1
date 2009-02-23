@@ -4,7 +4,7 @@
 #include	"estruct.h"
 #include	"edef.h"
 
-#if AMIGA && !FSE
+#if AMIGA
 
 #include 	<proto/intuition.h>
 #include 	<proto/exec.h>
