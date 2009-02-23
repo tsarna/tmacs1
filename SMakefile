@@ -1,0 +1,13 @@
+SRCS=fileio.c line.c spawn.c ansi.c display.c window.c basic.c eval.c main.c word.c bind.c random.c buffer.c exec.c input.c region.c crypt.c file.c isearch.c search.c termio.c amiga.c tags.c
+OBJS=fileio.o line.o spawn.o ansi.o display.o window.o basic.o eval.o main.o word.o bind.o random.o buffer.o exec.o input.o region.o crypt.o file.o isearch.o search.o termio.o amiga.o tags.o
+
+em : $(OBJS)
+	sc link ProgramName=em $(OBJS)
+
+installfse: em
+	c:copy em ram:fsemacs
+	c:copy em bbx:umb/fsemacs
+
+
+tags: $(SRCS)
+	ctags -d -t $(SRCS)
