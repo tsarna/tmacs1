@@ -10,7 +10,9 @@
 
 #ifdef SIGWINCH
 #include        <sys/ioctl.h>
+#endif
 
+#ifdef TIOCGWINSZ
 extern int gotsigwinch;
 #endif
 
@@ -358,13 +360,6 @@ get1key()
 	}
 #endif
 
-#if  WANGPC
-	if (c == 0x1F) {			/* Apply SPEC prefix    */
-	        c = tgetc();
-		return(SPEC | c);
-	}
-#endif
-
         if (c>=0x00 && c<=0x1F)                 /* C0 control -> C-     */
                 c = CTRL | (c+'@');
 
@@ -379,14 +374,14 @@ getcmd()
 {
 	int c;		/* fetched keystroke */
 
-#ifdef SIGWINCH
+#ifdef TIOCGWINSZ
         struct winsize ws;
 #endif
 
 	/* get initial character */
 	c = get1key();
 
-#ifdef SIGWINCH
+#ifdef TIOCGWINSZ
         if (gotsigwinch) {
         	gotsigwinch = 0;
      

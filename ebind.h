@@ -150,7 +150,7 @@ KEYTAB  keytab[NBINDS] = {
 	{META|'Z',		quickexit},
 	{META|0x7F,             delbword},
 
-#if	MSDOS & (HP150 == 0) & (WANGPC == 0) & (HP110 == 0)
+#if	MSDOS
 	{SPEC|CTRL|'_',		forwhunt},
 	{SPEC|CTRL|'S',		backhunt},
 	{SPEC|71,		gotobob},
@@ -179,45 +179,6 @@ KEYTAB  keytab[NBINDS] = {
 	{SPEC|91,		cbuf8},
 	{SPEC|92,		cbuf9},
 	{SPEC|93,		cbuf10},
-#endif
-
-#if	HP150
-	{SPEC|32,		backline},
-	{SPEC|33,		forwline},
-	{SPEC|35,		backchar},
-	{SPEC|34,		forwchar},
-	{SPEC|44,		gotobob},
-	{SPEC|46,		forwpage},
-	{SPEC|47,		backpage},
-	{SPEC|82,		nextwind},
-	{SPEC|68,		openline},
-	{SPEC|69,		killtext},
-	{SPEC|65,		forwdel},
-	{SPEC|64,		ctlxe},
-	{SPEC|67,		refresh},
-	{SPEC|66,		reposition},
-	{SPEC|83,		help},
-	{SPEC|81,		deskey},
-#endif
-
-#if	HP110
-	{SPEC|0x4b,		backchar},
-	{SPEC|0x4d,		forwchar},
-	{SPEC|0x48,		backline},
-	{SPEC|0x50,		forwline},
-	{SPEC|0x43,		help},
-	{SPEC|0x73,		backword},
-	{SPEC|0x74,		forwword},
-	{SPEC|0x49,		backpage},
-	{SPEC|0x51,		forwpage},
-	{SPEC|84,		cbuf1},
-	{SPEC|85,		cbuf2},
-	{SPEC|86,		cbuf3},
-	{SPEC|87,		cbuf4},
-	{SPEC|88,		cbuf5},
-	{SPEC|89,		cbuf6},
-	{SPEC|90,		cbuf7},
-	{SPEC|91,		cbuf8},
 #endif
 
 #if	TERMCAP
@@ -275,71 +236,6 @@ KEYTAB  keytab[NBINDS] = {
 	{SPEC|93,		cbuf10},
 #endif
 
-#if  WANGPC
-	SPEC|0xE0,              quit,           /* Cancel */
-	SPEC|0xE1,              help,           /* Help */
-	SPEC|0xF1,              help,           /* ^Help */
-	SPEC|0xE3,              ctrlg,          /* Print */
-	SPEC|0xF3,              ctrlg,          /* ^Print */
-	SPEC|0xC0,              backline,       /* North */
-	SPEC|0xD0,              gotobob,        /* ^North */
-	SPEC|0xC1,              forwchar,       /* East */
-	SPEC|0xD1,              gotoeol,        /* ^East */
-	SPEC|0xC2,              forwline,       /* South */
-	SPEC|0xD2,              gotobop,        /* ^South */
-	SPEC|0xC3,              backchar,       /* West */
-	SPEC|0xD3,              gotobol,        /* ^West */
-	SPEC|0xC4,              ctrlg,          /* Home */
-	SPEC|0xD4,              gotobob,        /* ^Home */
-	SPEC|0xC5,              filesave,       /* Execute */
-	SPEC|0xD5,              ctrlg,          /* ^Execute */
-	SPEC|0xC6,              insfile,        /* Insert */
-	SPEC|0xD6,              ctrlg,          /* ^Insert */
-	SPEC|0xC7,              forwdel,        /* Delete */
-	SPEC|0xD7,              killregion,     /* ^Delete */
-	SPEC|0xC8,              backpage,       /* Previous */
-	SPEC|0xD8,              prevwind,       /* ^Previous */
-	SPEC|0xC9,              forwpage,       /* Next */
-	SPEC|0xD9,              nextwind,       /* ^Next */
-	SPEC|0xCB,              ctrlg,          /* Erase */
-	SPEC|0xDB,              ctrlg,          /* ^Erase */
-	SPEC|0xDC,              ctrlg,          /* ^Tab */
-	SPEC|0xCD,              ctrlg,          /* BackTab */
-	SPEC|0xDD,              ctrlg,          /* ^BackTab */
-	SPEC|0x80,              ctrlg,          /* Indent */
-	SPEC|0x90,              ctrlg,          /* ^Indent */
-	SPEC|0x81,              ctrlg,          /* Page */
-	SPEC|0x91,              ctrlg,          /* ^Page */
-	SPEC|0x82,              ctrlg,          /* Center */
-	SPEC|0x92,              ctrlg,          /* ^Center */
-	SPEC|0x83,              ctrlg,          /* DecTab */
-	SPEC|0x93,              ctrlg,          /* ^DecTab */
-	SPEC|0x84,              ctrlg,          /* Format */
-	SPEC|0x94,              ctrlg,          /* ^Format */
-	SPEC|0x85,              ctrlg,          /* Merge */
-	SPEC|0x95,              ctrlg,          /* ^Merge */
-	SPEC|0x86,              setmark,        /* Note */
-	SPEC|0x96,              ctrlg,          /* ^Note */
-	SPEC|0x87,              ctrlg,          /* Stop */
-	SPEC|0x97,              ctrlg,          /* ^Stop */
-	SPEC|0x88,              forwsearch,     /* Srch */
-	SPEC|0x98,              backsearch,     /* ^Srch */
-	SPEC|0x89,              sreplace,       /* Replac */
-	SPEC|0x99,              qreplace,       /* ^Replac */
-	SPEC|0x8A,              ctrlg,          /* Copy */
-	SPEC|0x9A,              ctrlg,          /* ^Copy */
-	SPEC|0x8B,              ctrlg,          /* Move */
-	SPEC|0x9B,              ctrlg,          /* ^Move */
-	SPEC|0x8C,              namedcmd,       /* Command */
-	SPEC|0x9C,              spawn,          /* ^Command */
-	SPEC|0x8D,              ctrlg,          /* ^ */
-	SPEC|0x9D,              ctrlg,          /* ^^ */
-	SPEC|0x8E,              ctrlg,          /* Blank */
-	SPEC|0x9E,              ctrlg,          /* ^Blank */
-	SPEC|0x8F,              gotoline,       /* GoTo */
-	SPEC|0x9F,              usebuffer,      /* ^GoTo */
-#endif
- 
 	{0x7F,			backdel},
 
 	/* special internal bindings */

@@ -1,4 +1,7 @@
-fix CMODE newline on line of blanks
 fix mlwrite (what was this??)
-add rsin
-
+^X= on last line
+prefix-region?
+show-current-directory?
+set-prefix?
+revert-file
+completion

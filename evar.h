@@ -142,6 +142,7 @@ UFUNC funcs[] = {
 	"rnd", MONAMIC,		/* get a random number */
 	"abs", MONAMIC,		/* absolute value of a number */
 	"sin", DYNAMIC,		/* find the index of one string in another */
+	"rsn", DYNAMIC,		/* find the rindex of one string in another */
 	"env", MONAMIC,		/* retrieve a system environment var */
 	"bin", MONAMIC,		/* loopup what function name is bound to a key */
 };
@@ -180,5 +181,6 @@ UFUNC funcs[] = {
 #define	UFRND		27
 #define	UFABS		28
 #define	UFSINDEX	29
-#define	UFENV		30
-#define	UFBIND		31
+#define	UFRINDEX	30
+#define	UFENV		31
+#define	UFBIND		32

@@ -263,11 +263,7 @@
  *	- added goto and search command line arguments by Mike Spitzer
  *	26-may-86
  *	- added parameter fetching from buffers
- *	27-may-86
- *	- fixed some HP150 bugs......
  *	31-may-86
- *	- Added Wang PC keyboard support from modifications by
- *	  Sid Shapiro @ Wang Institute
  *	- Fixed some reverse video bugs with code submitted by Peter Chubb
  *	- Fixed bug in nextbuffer reported by Dave Forslund
  *	- added system V support (USG) from Linwood Varney
@@ -354,19 +350,13 @@
  *	25-jul-86
  *	- make ^G abort-command rebindable
  *	29-jul-86
- *	- added HP110 Portable Computer support
  *	- changed version number to 3.7d
  *	30-jul-86
  *	- Fixed a couple of errors in the new VMS code as pointer
  *	  out by Ken Shacklford
  *	- split terminal open/close routines into screen and keyboard
  *	  open/close routines
- *	- closed the keyboard during all disk I/O so that OS errors
- *	  can be respoded to correctly (especially on the HP150)
  *	- changed version number to 3.7e
- *	31-jul-86
- *	- added label-function-key (unbound) command under symbol FLABEL
- *	  (primarily for the HP150)
  *	4-aug-86
  *	- added fixes for Microsoft C as suggested by ihnp4!ihuxm!gmd1
  *		<<remember to fix [list] deletion bug as reported

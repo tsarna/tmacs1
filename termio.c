@@ -115,6 +115,22 @@ extern	int rtfrmshell();	/* return from suspended shell */
 char tobuf[TBUFSIZ];		/* terminal output buffer */
 #endif
 
+
+
+#if defined(__CYGWIN__)
+void
+cfmakeraw(struct termios *t)
+{
+        t->c_iflag &= ~(IMAXBEL|IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|
+                ICRNL|IXON);
+        t->c_oflag &= ~OPOST;
+        t->c_lflag &= ~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);
+        t->c_cflag &= ~(CSIZE|PARENB);
+        t->c_cflag |= CS8;
+}
+#endif
+
+
 /*
  * This function is called once to set up the terminal device streams.
  * On VMS, it translates TT until it finds the terminal, then assigns
@@ -191,7 +207,7 @@ ttopen()
 #if     CPM
 #endif
 
-#if     MSDOS & (HP150 == 0) & LATTICE
+#if     MSDOS & LATTICE
 	/* kill the ctrl-break interupt */
 	rg.h.ah = 0x33;		/* control-break check dos call */
 	rg.h.al = 1;		/* set the current state */
@@ -279,7 +295,7 @@ ttclose()
 #endif
 #if     CPM
 #endif
-#if     MSDOS & (HP150 == 0) & LATTICE
+#if     MSDOS & LATTICE
 	/* restore the ctrl-break interupt */
 	rg.h.ah = 0x33;		/* control-break check dos call */
 	rg.h.al = 1;		/* set the current state */
@@ -545,7 +561,7 @@ typahead()
 	return(TRUE);
 #endif
 
-#if	BSD
+#if	BSD && defined(FIONREAD)
 	int x;	/* holds # of pending chars */
 
 	return((ioctl(0,FIONREAD,&x) < 0) ? 0 : x);
@@ -564,4 +580,3 @@ typahead()
 	return(FALSE);
 }
 #endif
-

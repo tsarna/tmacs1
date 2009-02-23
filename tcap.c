@@ -78,7 +78,9 @@ TERM term = {
 
 #ifdef SIGWINCH
 #include <sys/ioctl.h>
+#endif
 
+#ifdef TIOCGWINSZ
 int gotsigwinch = 0;
 
 void
@@ -94,11 +96,11 @@ tcapopen()
 {
         char *getenv();
         char *t, *p, *tgetstr();
-        char tcbuf[1024];
+        char tcbuf[2048];
         char *tv_stype;
         char err_str[72];
 
-#ifdef SIGWINCH
+#ifdef TIOCGWINSZ
         struct winsize ws;
 #endif
 
@@ -128,7 +130,7 @@ tcapopen()
         }
 	term.t_mcol = 256;
 
-#ifdef SIGWINCH
+#ifdef TIOCGWINSZ
         if (ioctl(0, TIOCGWINSZ, &ws) == 0) {
                 term.t_nrow = ws.ws_row - 1;
                 term.t_ncol = ws.ws_col;
@@ -168,7 +170,9 @@ tcapopen()
         ttopen();
 	putpad(TI);
 
+#ifdef TIOCGWINSZ
         signal(SIGWINCH, do_sigwinch);
+#endif
 }
 
 

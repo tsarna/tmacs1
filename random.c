@@ -486,7 +486,6 @@ int mode;
 		}
 	}
 
-	mlwrite("[~~ column is %d]",tptr);
 	/* save the indent of the previous line */
 	i = 0;
 	while ((i <= tptr) && (cptr[i] == ' ' || cptr[i] == '\t')

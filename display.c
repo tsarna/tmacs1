@@ -629,10 +629,6 @@ struct VIDEO *vp2;	/* physical screen image */
 #if	COLOR
 	    || (vp1->v_fcolor != vp1->v_rfcolor) || (vp1->v_bcolor != vp1->v_rbcolor)
 #endif
-#if	HP150
-	/* the HP150 has some reverse video problems */
-	    || req || rev
-#endif
 			) {
 		movecursor(row, 0);	/* Go to start of line. */
 		/* set rev video if needed */

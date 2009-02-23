@@ -101,6 +101,7 @@ char *fname;		/* name of function to evaluate */
 		case UFRND:	return(itoa((ernd() % abs(atoi(arg1))) + 1));
 		case UFABS:	return(itoa(abs(atoi(arg1))));
 		case UFSINDEX:	return(itoa(sindex(arg1, arg2)));
+		case UFRINDEX:	return(itoa(srindex(arg1, arg2)));
 		case UFENV:
 #if	ENVFUNC
 				return(getenv(arg1) == NULL ? "" : getenv(arg1));
@@ -793,3 +794,26 @@ char *pattern;	/* string to look for */
 	/* no match at all.. */
 	return(0);
 }
+
+
+int srindex(source, pattern)	/* find pattern within source */
+
+char *source;	/* source string to search */
+char *pattern;	/* string to look for */
+
+{
+    int n, l = 0;
+    
+    l = sindex(source, pattern);
+    while (l) {
+        n = sindex(source+l, pattern);
+        if (n) {
+            l += n;
+        } else {
+            return l;
+        }
+    }
+
+    return(l);
+}
+

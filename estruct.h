@@ -36,7 +36,7 @@
 */
 
 #define	PROGNAME	"TMACS"
-#define	VERSION		"1.0.3"
+#define	VERSION		"1.0.5"
 
 /*	Machine/OS definitions			*/
 
@@ -63,15 +63,9 @@
 #define	RAMSIZE	0	/* dynamic RAM memory usage tracking */
 #define	RAMSHOW	0	/* auto dynamic RAM reporting */
 
-/*   Special keyboard definitions            */
-
-#define WANGPC	0		/* WangPC - mostly escape sequences     */
-
 /*	Terminal Output definitions		*/
 
 #define ANSI    0			/* ANSI escape sequences	*/
-#define	HP150	0			/* HP150 screen driver		*/
-#define	HP110	0			/* HP110 screen driver		*/
 #define	VMSVT	0			/* various VMS terminal entries	*/
 #define VT52    0                       /* VT52 terminal (Zenith).      */
 #define VT100   0                       /* Handle VT100 style keypad.   */
@@ -99,7 +93,7 @@
 #define	FILOCK	0	/* file locking under unix BSD 4.2		*/
 #define	ISRCH	1	/* Incremental searches like ITS EMACS		*/
 #define	WORDPRO	1	/* Advanced word processing features		*/
-#define	FLABEL	0	/* function key label code [HP150]		*/
+#define	FLABEL	0	/* function key label code       		*/
 #define	APROP	1	/* Add code for Apropos command			*/
 #define	CRYPT	0	/* file encryption enabled?			*/
 #define MAGIC	1	/* include regular expression matching?		*/
